@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="image/LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --olive:      #8B8F47;
@@ -87,7 +87,7 @@
         .nav__menu a.active::after { width:100%; }
         .nav__cta { background:var(--kiwi)!important; color:var(--brown)!important; padding:0.55rem 1.3rem; border-radius:var(--radius-sm); }
         .nav__cta:hover { background:var(--brown)!important; color:var(--white)!important; }
-        a.nav__region { color:var(--brown)!important; }
+        .nav__menu a.nav__region { color:var(--brown)!important; }
         .nav__burger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
         .nav__burger span { display:block; width:24px; height:2px; background:var(--brown); }
 
@@ -100,10 +100,26 @@
         .drawer__menu a { display:block; padding:1.1rem 0; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:600; color:var(--white); transition:color 0.3s; }
         .drawer__menu a:hover { color:var(--kiwi); }
 
-        /* PAGE BANNER */
-        .page-banner{padding:9rem 5rem 5rem;text-align:center;border-bottom:1px solid var(--sage);}
-        .page-banner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:600;color:var(--brown);line-height:1;margin-bottom:1.2rem;}
-        .page-banner .lead{max-width:640px;margin:0 auto;color:var(--text-muted);}
+        /* HERO (style "professionnels") */
+        .p-hero{
+            position:relative;min-height:660px;display:flex;flex-direction:column;justify-content:center;color:var(--white);
+            background:
+                linear-gradient(90deg,rgba(10,14,8,.88) 0%,rgba(10,14,8,.6) 42%,rgba(10,14,8,.25) 75%,rgba(10,14,8,.06) 100%),
+                url('image/le-comptoir-hero.jpeg') center/cover no-repeat;
+            padding:8.5rem 5rem 4.5rem;
+        }
+        .p-hero__eyebrow{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:inline-block;}
+        .p-hero h1{font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:1px;font-size:clamp(2.8rem,6vw,5rem);line-height:1.02;color:var(--white);margin-bottom:.4rem;text-shadow:0 4px 26px rgba(0,0,0,.4);}
+        .p-hero__script{font-family:'Caveat',cursive;font-weight:600;font-size:clamp(1.7rem,2.8vw,2.3rem);color:var(--kiwi);margin-bottom:1.3rem;line-height:1;}
+        .p-hero .lead{font-family:'Montserrat',sans-serif;max-width:580px;color:rgba(255,255,255,.85);}
+
+        /* ════════════════════════════════════════════
+           SECTION – OÙ NOUS TROUVER
+        ════════════════════════════════════════════ */
+        .ounoustrouver{display:grid;grid-template-columns:1fr 1.35fr;gap:4.5rem;align-items:center;padding:8rem 5rem;background:var(--white);}
+        .ounoustrouver__img img{width:100%;border-radius:var(--radius);box-shadow:0 24px 60px rgba(95,56,23,.14);}
+        .ounoustrouver__text p{font-size:1rem;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;}
+        .ounoustrouver__text p strong{color:var(--brown);}
 
         /* ════════════════════════════════════════════
            SECTION – LE COMPTOIR
@@ -330,6 +346,7 @@
             .producteurs__text { padding:4rem 3rem; }
             .apc__slide-text { padding:3rem 3.5rem; }
             .carte__body { grid-template-columns:220px 1fr; gap:3rem; }
+            .ounoustrouver { padding:6rem 3rem; gap:3rem; }
         }
         @media (max-width:1024px) {
             .nav { padding:0 2rem; }
@@ -344,10 +361,13 @@
             .carte__body { grid-template-columns:1fr; }
             .regions { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
             .footer__top { grid-template-columns:1fr 1fr; }
+            .ounoustrouver { grid-template-columns:1fr; padding:4rem 3rem; }
         }
         @media (max-width:768px) {
             .nav { padding:0 1.5rem; }
             .comptoir,.carte,.footer { padding:4rem 1.5rem; }
+            .p-hero { padding:7rem 1.5rem 3.5rem; min-height:460px; }
+            .ounoustrouver { padding:3.5rem 1.5rem; }
             .producteurs__text { padding:3rem 1.5rem; }
             .apc__slide { height:360px; }
             .apc__slide-text { width:80%; padding:2rem 1.5rem; }
@@ -398,12 +418,13 @@
 </div>
 
 
-<!-- PAGE BANNER -->
-<div class="page-banner">
-    <span class="label">Notre Histoire</span>
+<!-- HERO -->
+<header class="p-hero">
+    <span class="p-hero__eyebrow">Le Fruitier</span>
     <h1>À Propos du Fruitier</h1>
+    <p class="p-hero__script">notre histoire, notre passion</p>
     <p class="lead">Depuis plus de 20 ans, votre primeur de confiance au cœur de La Destrousse et des saveurs de Provence.</p>
-</div>
+</header>
 
 
 
@@ -428,6 +449,26 @@
 
 
 <!-- ═══════════════════════════════════════════════
+     SECTION – OÙ NOUS TROUVER
+═══════════════════════════════════════════════ -->
+<section class="ounoustrouver" id="ounoustrouver">
+    <div class="ounoustrouver__text reveal-l">
+        <span class="label">Où Nous Trouver</span>
+        <h2 class="display">Impossible de nous manquer&nbsp;!</h2>
+        <p>Notre magasin est idéalement situé juste après le rond-point de La Destrousse, bien visible depuis la route&nbsp;: impossible de nous rater en arrivant. Repérez l'enseigne Le Fruitier, et vous y êtes.</p>
+        <p>Un grand parking se trouve juste devant notre magasin, partagé avec les commerces voisins. Ce n'est pas un parking privé, mais il est spacieux et vous trouverez toujours une place pour vous garer facilement.</p>
+        <a href="contact.html" class="btn btn--dark">
+            NOUS CONTACTER
+            <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+    <div class="ounoustrouver__img reveal-r">
+        <img src="image/ounoustrouver.jpg" alt="Le Fruitier vu depuis le rond-point d'accès à La Destrousse">
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
      SECTION 2 – MINI-CAROUSEL BOUTIQUE
 ═══════════════════════════════════════════════ -->
 <section class="apc">
@@ -444,7 +485,7 @@
                     <div class="apc__slide-tag">Notre Espace</div>
                     <h2 class="apc__slide-title">Une boutique pensée pour vous</h2>
                     <p class="apc__slide-desc">Chez Le Fruitier, chaque rayon est soigneusement sélectionné pour vous offrir le meilleur de la Provence. Un espace chaleureux où fraîcheur et gourmandise se côtoient.</p>
-                    <a href="#" class="btn btn--kiwi">
+                    <a href="#ounoustrouver" class="btn btn--kiwi">
                         EN SAVOIR +
                         <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
@@ -478,7 +519,7 @@
                     <div class="apc__slide-tag">Notre Engagement</div>
                     <h2 class="apc__slide-title">La fraîcheur, chaque jour</h2>
                     <p class="apc__slide-desc">Nos fruits et légumes arrivent directement de chez nos maraîchers partenaires. Fraîcheur garantie, saveurs préservées, parce que le goût de la Provence mérite d'être respecté.</p>
-                    <a href="produits-regionaux.html#producteurs" class="btn btn--kiwi">
+                    <a href="nos-producteurs.html" class="btn btn--kiwi">
                         NOS PRODUCTEURS
                         <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
@@ -501,8 +542,6 @@
         <button class="apc__dot" data-slide="2"></button>
     </div>
 </section>
-
-
 
 
 
@@ -537,7 +576,7 @@
             <ul>
                 <li><a href="produits.html#fruits">Fruits &amp; Légumes</a></li>
                 <li><a href="produits.html#epicerie">Épicerie Fine</a></li>
-                <li><a href="produits.html#cave">Cave à Vins</a></li>
+                <li><a href="produits.html#boissons">Boissons &amp; Vins</a></li>
                 <li><a href="produits.html#confiserie">Confiserie</a></li>
                 <li><a href="offrir.html">Paniers &amp; Cadeaux</a></li>
                 <li><a href="produits-regionaux.html">Produits Régionaux</a></li>

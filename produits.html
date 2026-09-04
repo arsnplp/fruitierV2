@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Univers – Le Fruitier · La Destrousse</title>
-    <meta name="description" content="Fruits et légumes de saison, épicerie fine, cave à vins, confiserie d'exception. Les 4 univers gourmands du Fruitier à La Destrousse.">
+    <title>Nos Produits – Le Fruitier · La Destrousse</title>
+    <meta name="description" content="Catalogue complet du Fruitier : fruits et légumes de saison, épicerie fine, cave à vins et confiserie d'exception. Filtrez par catégorie et sous-catégorie.">
     <link rel="icon" type="image/png" href="image/LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --olive:#8B8F47; --green:#616D29; --kiwi:#99C122; --sage:#D2D4C1;
@@ -23,6 +23,7 @@
         img{display:block;max-width:100%;}
         a{text-decoration:none;color:inherit;}
         ul{list-style:none;}
+        button{font:inherit;}
 
         .label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding:.45rem 1rem;background:var(--sage);color:var(--green);margin-bottom:1.4rem;}
         h2.display{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:600;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;}
@@ -34,10 +35,6 @@
         .arr{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
         .btn--dark{background:var(--brown);color:var(--white);}
         .btn--dark:hover{background:var(--green);}
-        .btn--kiwi{background:var(--kiwi);color:var(--brown);}
-        .btn--kiwi:hover{background:var(--brown);color:var(--white);}
-        .btn--ghost{background:transparent;border:1.5px solid var(--brown);color:var(--brown);}
-        .btn--ghost:hover{background:var(--brown);color:var(--white);}
 
         /* NAV */
         .nav{position:fixed;inset:0 0 auto 0;z-index:900;padding:0 3.5rem;background:rgba(245,245,239,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 2px 22px rgba(95,56,23,.06);}
@@ -50,7 +47,7 @@
         .nav__menu a:not(.nav__cta):hover::after,.nav__menu a.active::after{width:100%;}
         .nav__cta{background:var(--kiwi)!important;color:var(--brown)!important;padding:.55rem 1.3rem;border-radius:var(--radius-sm);}
         .nav__cta:hover{background:var(--brown)!important;color:var(--white)!important;}
-        a.nav__region{color:var(--brown)!important;}
+        .nav__menu a.nav__region{color:var(--brown)!important;}
         .nav__burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
         .nav__burger span{display:block;width:24px;height:2px;background:var(--brown);}
 
@@ -61,31 +58,72 @@
         .drawer__menu{list-style:none;text-align:center;}
         .drawer__menu li{margin-bottom:1.8rem;}
         .drawer__menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--white);letter-spacing:.04em;}
+        .drawer__menu a:hover{color:var(--kiwi);}
 
-        /* PAGE BANNER */
-        .page-banner{padding:9rem 5rem 5rem;text-align:center;border-bottom:1px solid var(--sage);}
-        .page-banner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:600;color:var(--brown);line-height:1;margin-bottom:1.2rem;}
-        .page-banner .lead{max-width:580px;margin:0 auto;color:var(--text-muted);}
+        /* HERO PHOTO (style "professionnels") */
+        .p-hero{
+            position:relative;min-height:660px;display:flex;flex-direction:column;justify-content:center;color:var(--white);
+            background:
+                linear-gradient(90deg,rgba(10,14,8,.88) 0%,rgba(10,14,8,.6) 42%,rgba(10,14,8,.25) 75%,rgba(10,14,8,.06) 100%),
+                url('image/nos produit/header.jpeg') center/cover no-repeat;
+            padding:8.5rem 5rem 4.5rem;
+        }
+        .p-hero__eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:inline-block;}
+        .p-hero h1{font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:1px;font-size:clamp(2.8rem,6vw,5rem);line-height:1.02;color:var(--white);margin-bottom:.4rem;text-shadow:0 4px 26px rgba(0,0,0,.4);}
+        .p-hero__script{font-family:'Caveat',cursive;font-weight:600;font-size:clamp(1.7rem,2.8vw,2.3rem);color:var(--kiwi);margin-bottom:1.3rem;line-height:1;}
+        .p-hero .lead{max-width:580px;color:rgba(255,255,255,.85);}
 
-        /* SPLIT SECTIONS */
-        .split{display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
-        .split__img{overflow:hidden;position:relative;}
-        .split__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-out);}
-        .split:hover .split__img img{transform:scale(1.04);}
-        .split__text{display:flex;flex-direction:column;justify-content:center;padding:5rem 6rem;}
-        .split__text--cream{background:var(--cream);}
-        .split__text--white{background:var(--white);}
+        /* TOOLBAR */
+        .catalog-toolbar{position:sticky;top:0;z-index:80;background:rgba(245,245,239,.97);backdrop-filter:blur(10px);border-top:1px solid var(--sage);border-bottom:1px solid var(--sage);padding:1.5rem 3.5rem 0;}
+        .cat-tabs{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:1rem;}
+        .cat-tabs button{background:var(--white);border:1.5px solid var(--sage);color:var(--brown);font-size:.78rem;font-weight:700;letter-spacing:.03em;padding:.7rem 1.3rem;border-radius:30px;cursor:pointer;transition:background .25s,color .25s,border-color .25s;}
+        .cat-tabs button:hover{border-color:var(--brown);}
+        .cat-tabs button.is-active{background:var(--brown);color:var(--white);border-color:var(--brown);}
+        .sub-tabs{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;padding-bottom:1.2rem;}
+        .sub-tabs button{background:none;border:none;color:var(--text-muted);font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.4rem .8rem;cursor:pointer;border-bottom:2px solid transparent;transition:color .25s,border-color .25s;}
+        .sub-tabs button:hover{color:var(--brown);}
+        .sub-tabs button.is-active{color:var(--green);border-color:var(--kiwi);}
 
-        /* DOUCET BADGE */
-        .doucet-badge{display:flex;align-items:center;gap:1.2rem;padding:1.2rem 1.6rem;background:var(--brown);color:var(--white);border-radius:var(--radius);margin-bottom:1.5rem;}
-        .doucet-badge__star{font-size:2rem;color:var(--kiwi);}
-        .doucet-badge strong{display:block;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--kiwi);margin-bottom:.2rem;}
-        .doucet-badge span{font-size:.88rem;color:rgba(255,255,255,.75);}
+        /* CATEGORY INTRO */
+        .cat-intro{max-width:1440px;margin:0 auto;padding:3rem 3.5rem;}
+        .cat-intro__inner{display:grid;grid-template-columns:1.4fr .8fr;gap:3.5rem;align-items:center;background:var(--white);border-radius:var(--radius);padding:2.8rem 3rem;}
+        .cat-intro__title{font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:1px;font-size:clamp(1.9rem,3.2vw,2.9rem);line-height:1.05;color:var(--brown);margin-bottom:1rem;}
+        .cat-intro__badge{display:flex;align-items:center;gap:.6rem;margin-bottom:1.1rem;color:var(--green);font-size:.8rem;font-weight:700;letter-spacing:.06em;}
+        .cat-intro__badge .star{color:var(--kiwi);font-size:1.05rem;line-height:1;}
+        .cat-intro__text p{font-size:.95rem;line-height:1.8;color:var(--text-muted);margin-bottom:1rem;}
+        .cat-intro__text p:last-child{margin-bottom:0;}
+        .cat-intro__img img{width:100%;border-radius:var(--radius-sm);box-shadow:0 16px 40px rgba(95,56,23,.14);display:block;}
+        @media(max-width:820px){
+            .cat-intro{padding:2rem 1.5rem;}
+            .cat-intro__inner{grid-template-columns:1fr;gap:1.8rem;padding:1.8rem 1.5rem;}
+            .cat-intro__img{order:-1;}
+        }
+
+        /* RESULTS */
+        .results-wrap{max-width:1440px;margin:0 auto;padding:2.5rem 3.5rem 6rem;}
+        .results-bar{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.8rem;flex-wrap:wrap;gap:.6rem;}
+        .results-count{font-size:.9rem;color:var(--text-muted);}
+        .results-count strong{color:var(--brown);font-weight:800;}
+        .results-empty{text-align:center;padding:4rem 1rem;color:var(--text-muted);font-size:1rem;display:none;}
+
+        .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.6rem;}
+        .product-card{background:var(--white);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease-out),box-shadow .3s;}
+        .product-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(95,56,23,.12);}
+        .product-card__media{aspect-ratio:4/3;overflow:hidden;background:var(--sage);}
+        .product-card__media img{width:100%;height:100%;object-fit:cover;display:block;}
+        .product-card__placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;background:repeating-linear-gradient(135deg,#ECE9DE,#ECE9DE 10px,#E3DFCF 10px,#E3DFCF 20px);border:1.5px dashed #C9BFA0;color:#8E7C50;text-align:center;padding:.8rem;}
+        .product-card__placeholder .ico{font-size:1.6rem;}
+        .product-card__placeholder span{font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;}
+        .product-card__body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.35rem;flex:1;}
+        .product-card__tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.15rem;}
+        .product-card__tag{font-size:.6rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.28rem .55rem;border-radius:20px;background:var(--sage);color:var(--green);}
+        .product-card__tag--type{background:var(--cream);color:var(--brown-mid);}
+        .product-card__name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--brown);line-height:1.25;}
+        .product-card__brand{font-size:.74rem;color:var(--text-muted);}
 
         /* REVEAL */
         .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out);}
         .reveal.is-visible{opacity:1;transform:none;}
-        .reveal-delay{transition-delay:.15s;}
 
         /* FOOTER */
         .footer{background:var(--brown);color:rgba(255,255,255,.75);font-size:.9rem;line-height:1.7;}
@@ -118,15 +156,14 @@
             .nav{padding:0 2rem;}
             .nav__menu{display:none;}
             .nav__burger{display:flex;}
-            .split{grid-template-columns:1fr;min-height:auto;}
-            .split__img{height:360px;order:-1!important;}
-            .split__text{padding:3.5rem 2.5rem;order:0!important;}
-            .page-banner{padding:7rem 2rem 3.5rem;}
+            .p-hero{padding:7rem 2rem 3rem;min-height:460px;}
+            .catalog-toolbar{padding:1.2rem 1.5rem 0;}
+            .results-wrap{padding:2rem 1.5rem 4rem;}
             .footer__top{grid-template-columns:1fr 1fr;padding:3rem 2rem;gap:2rem;}
             .footer__bottom{padding:1.5rem 2rem;}
         }
         @media(max-width:768px){
-            .split__text{padding:2.5rem 1.5rem;}
+            .product-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem;}
             .footer__top{grid-template-columns:1fr;}
         }
     </style>
@@ -170,74 +207,31 @@
     </ul>
 </div>
 
-<!-- PAGE BANNER -->
-<div class="page-banner">
-    <span class="label">Le Fruitier</span>
-    <h1>Nos Univers</h1>
-    <p class="lead">Quatre mondes gourmands réunis sous un même toit : fraîcheur, terroir, passion et savoir-faire au cœur de la Provence.</p>
+<!-- HERO -->
+<header class="p-hero">
+    <span class="p-hero__eyebrow">Le Fruitier</span>
+    <h1>Nos Produits</h1>
+    <p class="p-hero__script">fraîcheur, terroir &amp; gourmandise</p>
+    <p class="lead">Le catalogue complet du Fruitier : fruits et légumes de saison, épicerie fine, boissons &amp; vins et confiserie d'exception. Filtrez par catégorie pour trouver ce que vous cherchez.</p>
+</header>
+
+<!-- INTRO CATÉGORIE -->
+<section class="cat-intro" id="catIntro"></section>
+
+<!-- TOOLBAR -->
+<div class="catalog-toolbar">
+    <div class="cat-tabs" id="catTabs"></div>
+    <div class="sub-tabs" id="subTabs"></div>
 </div>
 
-<!-- FRUITS & LÉGUMES -->
-<section class="split" id="fruits">
-    <div class="split__text split__text--cream">
-        <span class="label">De Saison</span>
-        <h2 class="display reveal">FRUITS &amp; LÉGUMES<br>DE SAISON</h2>
-        <p class="lead reveal">Au fil des saisons, notre étal se transforme au rythme de la nature. Fraises de Provence en mai, melons du Vaucluse en juillet, champignons en automne… Nous sélectionnons chaque matin, auprès de nos agriculteurs partenaires, les fruits et légumes au meilleur de leur maturité.</p>
-        <p class="lead reveal reveal-delay">Chaque arrivage est une promesse de fraîcheur, de goût et de respect de la terre. Parce qu'un bon légume n'a pas besoin d'autre chose que d'être cueilli au bon moment.</p>
-        <a href="a-propos.html#producteurs" class="btn btn--dark reveal">NOS PRODUCTEURS <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<!-- RESULTS -->
+<div class="results-wrap">
+    <div class="results-bar">
+        <p class="results-count" id="resultsCount"><strong>0</strong> produits trouvés</p>
     </div>
-    <div class="split__img">
-        <img src="image/bacpleindelegume.png" alt="Bac plein de légumes frais de saison">
-    </div>
-</section>
-
-<!-- ÉPICERIE FINE -->
-<section class="split" id="epicerie">
-    <div class="split__img">
-        <img src="image/rayon avec plein de chose.png" alt="Rayon épicerie fine">
-    </div>
-    <div class="split__text split__text--white">
-        <span class="label">Artisanat &amp; Terroir</span>
-        <h2 class="display reveal">ÉPICERIE FINE</h2>
-        <p class="lead reveal">Un voyage gustatif sans quitter La Destrousse. Notre sélection d'épicerie fine rassemble les meilleurs produits artisanaux : huiles d'olive de caractère, tapenades maison, confitures de saison, vinaigres aromatiques, miels de garrigue et bien d'autres trésors soigneusement choisis.</p>
-        <p class="lead reveal reveal-delay">Chaque produit est retenu pour son histoire, son authenticité et la passion de celui qui le fabrique. Des saveurs qui racontent la Provence dans toute sa richesse.</p>
-        <a href="contact.html" class="btn btn--dark reveal">NOUS CONTACTER <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-</section>
-
-<!-- CAVE À VINS -->
-<section class="split" id="cave">
-    <div class="split__text split__text--cream">
-        <span class="label">Vins &amp; Domaines</span>
-        <h2 class="display reveal">CAVE À VINS</h2>
-        <p class="lead reveal">De la vigne à votre verre, nous avons sélectionné les meilleurs crus provençaux et des appellations de toute la France. Rosés de Provence, rouges des Côtes-du-Rhône, blancs de Cassis et de Palette… notre cave met à l'honneur les domaines qui travaillent avec passion et respect du terroir.</p>
-        <p class="lead reveal reveal-delay">Nos conseillers vous guident dans vos choix, que ce soit pour accompagner un repas du quotidien ou pour offrir une bouteille d'exception. Les grands plaisirs se cachent souvent derrière les petites étiquettes.</p>
-        <a href="contact.html" class="btn btn--dark reveal">NOUS CONTACTER <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-    <div class="split__img">
-        <img src="image/rangébouteillesvin.png" alt="Cave à vins, rangée de bouteilles">
-    </div>
-</section>
-
-<!-- CONFISERIE -->
-<section class="split" id="confiserie">
-    <div class="split__img">
-        <img src="image/gros plan sur des paquet de confiseries.png" alt="Confiseries artisanales d'exception">
-    </div>
-    <div class="split__text split__text--white">
-        <span class="label">Produits d'Exception</span>
-        <h2 class="display reveal">CONFISERIE<br>D'EXCEPTION</h2>
-        <div class="doucet-badge reveal">
-            <div class="doucet-badge__star">★</div>
-            <div>
-                <span>Partenaire de Jean-François Doucet, Meilleur Ouvrier de France</span>
-            </div>
-        </div>
-        <p class="lead reveal">Calissons, fruits confits, nougats, pâtes de fruits et gourmandises d'exception… Notre rayon confiserie rassemble des créations artisanales d'une qualité rare, dans la plus pure tradition provençale.</p>
-        <p class="lead reveal reveal-delay">Chaque douceur est le fruit d'un savoir-faire unique, transmis de génération en génération et perpétué avec passion. À offrir ou à s'offrir, pour une parenthèse sucrée d'exception.</p>
-        <a href="contact.html" class="btn btn--dark reveal">EN SAVOIR PLUS <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-</section>
+    <div class="product-grid" id="productGrid"></div>
+    <p class="results-empty" id="resultsEmpty">Aucun produit dans cette sélection pour le moment.</p>
+</div>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -267,7 +261,7 @@
             <ul>
                 <li><a href="produits.html#fruits">Fruits &amp; Légumes</a></li>
                 <li><a href="produits.html#epicerie">Épicerie Fine</a></li>
-                <li><a href="produits.html#cave">Cave à Vins</a></li>
+                <li><a href="produits.html#boissons">Boissons &amp; Vins</a></li>
                 <li><a href="produits.html#confiserie">Confiserie</a></li>
                 <li><a href="offrir.html">Paniers &amp; Cadeaux</a></li>
                 <li><a href="produits-regionaux.html">Produits Régionaux</a></li>
@@ -299,17 +293,298 @@
 </footer>
 
 <script>
-    const burger = document.getElementById('burgerBtn');
-    const drawer = document.getElementById('drawer');
-    const drawerClose = document.getElementById('drawerClose');
-    burger.addEventListener('click', () => drawer.classList.add('is-open'));
-    drawerClose.addEventListener('click', () => drawer.classList.remove('is-open'));
-    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('is-open')));
+/* ============ CATEGORIES ============ */
+const CATEGORIES = [
+    { id: 'fruits',     label: 'Fruits & Légumes', subs: ['Printemps','Été','Automne','Hiver'] },
+    { id: 'epicerie',   label: 'Épicerie Fine',     subs: ['Huiles, vinaigres & condiments','Conserves & spécialités salées','Apéritif','Produits frais & gastronomie'] },
+    { id: 'boissons',   label: 'Boissons & Vins',   subs: ['Jus & sirops','Café, thé & infusions','Vins','Gamme corse'] },
+    { id: 'confiserie', label: 'Confiserie',        subs: [] },
+];
+const IMG = p => 'image/produit/web/' + p;
 
-    const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+/* ============ INTROS CATÉGORIES ============ */
+const CAT_INTROS = {
+    fruits: {
+        title: 'Fruits &amp; Légumes<br>de saison',
+        img: 'image/bacpleindelegume.png',
+        alt: 'Bac plein de légumes frais',
+        paras: [
+            "Au fil des saisons, notre étal se transforme au rythme de la nature. Fraises de Provence en mai, melons du Vaucluse en juillet, champignons en automne… Nous sélectionnons chaque matin, auprès de nos agriculteurs partenaires, les fruits et légumes au meilleur de leur maturité.",
+            "Chaque arrivage est une promesse de fraîcheur, de goût et de respect de la terre. Parce qu'un bon légume n'a pas besoin d'autre chose que d'être cueilli au bon moment."
+        ]
+    },
+    epicerie: {
+        title: 'Épicerie Fine',
+        img: 'image/rayon avec plein de chose.png',
+        alt: 'Rayon épicerie fine du Fruitier',
+        paras: [
+            "Un voyage gustatif sans quitter La Destrousse. Notre sélection d'épicerie fine rassemble les meilleurs produits artisanaux : huiles d'olive de caractère, tapenades maison, confitures de saison, vinaigres aromatiques, miels de garrigue et bien d'autres trésors soigneusement choisis.",
+            "Chaque produit est retenu pour son histoire, son authenticité et la passion de celui qui le fabrique. Des saveurs qui racontent la Provence dans toute sa richesse."
+        ]
+    },
+    boissons: {
+        title: 'Cave à Vins',
+        img: 'image/rangébouteillesvin.png',
+        alt: 'Rangée de bouteilles de vin de notre cave',
+        paras: [
+            "De la vigne à votre verre, nous avons sélectionné les meilleurs crus provençaux et des appellations de toute la France. Rosés de Provence, rouges des Côtes-du-Rhône, blancs de Cassis et de Palette… notre cave met à l'honneur les domaines qui travaillent avec passion et respect du terroir.",
+            "Nos conseillers vous guident dans vos choix, que ce soit pour accompagner un repas du quotidien ou pour offrir une bouteille d'exception. Les grands plaisirs se cachent souvent derrière les petites étiquettes."
+        ]
+    },
+    confiserie: {
+        title: "Confiserie<br>d'exception",
+        badge: "Partenaire de Jean-François Doucet, Meilleur Ouvrier de France",
+        img: 'image/gros plan sur des paquet de confiseries.png',
+        alt: 'Gros plan sur nos confiseries artisanales',
+        paras: [
+            "Calissons, fruits confits, nougats, pâtes de fruits et gourmandises d'exception… Notre rayon confiserie rassemble des créations artisanales d'une qualité rare, dans la plus pure tradition provençale.",
+            "Chaque douceur est le fruit d'un savoir-faire unique, transmis de génération en génération et perpétué avec passion. À offrir ou à s'offrir, pour une parenthèse sucrée d'exception."
+        ]
+    }
+};
+
+/* ============ PRODUCTS ============ */
+const PRODUCTS = [
+    // ---- FRUITS & LÉGUMES — Printemps ----
+    { n:'Fraise', c:'fruits', s:'Printemps', t:'Fruit' },
+    { n:'Cerise', c:'fruits', s:'Printemps', t:'Fruit' },
+    { n:'Asperge', c:'fruits', s:'Printemps', t:'Légume' },
+    { n:'Petit pois', c:'fruits', s:'Printemps', t:'Légume' },
+    { n:'Radis', c:'fruits', s:'Printemps', t:'Légume' },
+    { n:'Épinard', c:'fruits', s:'Printemps', t:'Légume' },
+    { n:'Fève', c:'fruits', s:'Printemps', t:'Légume' },
+    { n:'Carotte', c:'fruits', s:'Printemps', t:'Légume' },
+    { n:'Salade', c:'fruits', s:'Printemps', t:'Légume' },
+    { n:'Persil', c:'fruits', s:'Printemps', t:'Légume' },
+
+    // ---- FRUITS & LÉGUMES — Été ----
+    { n:'Pêche', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Nectarine', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Melon charentais', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Melon vert', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Melon jaune', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Abricot', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Prune', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Figue', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Pomme de terre', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Basilic', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Tomate', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Courgette', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Aubergine', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Poivron', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Concombre', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Haricot vert', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Salade', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Persil', c:'fruits', s:'Été', t:'Légume' },
+
+    // ---- FRUITS & LÉGUMES — Automne ----
+    { n:'Poire', c:'fruits', s:'Automne', t:'Fruit' },
+    { n:'Pomme', c:'fruits', s:'Automne', t:'Fruit' },
+    { n:'Potimarron', c:'fruits', s:'Automne', t:'Légume' },
+    { n:'Butternut', c:'fruits', s:'Automne', t:'Légume' },
+    { n:'Poireau', c:'fruits', s:'Automne', t:'Légume' },
+    { n:'Salade', c:'fruits', s:'Automne', t:'Légume' },
+    { n:'Persil', c:'fruits', s:'Automne', t:'Légume' },
+
+    // ---- FRUITS & LÉGUMES — Hiver ----
+    { n:'Clémentine', c:'fruits', s:'Hiver', t:'Fruit' },
+    { n:'Pomme', c:'fruits', s:'Hiver', t:'Fruit' },
+    { n:'Chou-fleur', c:'fruits', s:'Hiver', t:'Légume' },
+    { n:'Mâche', c:'fruits', s:'Hiver', t:'Légume' },
+    { n:'Navet', c:'fruits', s:'Hiver', t:'Légume' },
+    { n:'Blette', c:'fruits', s:'Hiver', t:'Légume' },
+
+    // ---- ÉPICERIE FINE — Huiles, vinaigres & condiments ----
+    { n:'Huile d’olive', b:'Moulin de Pélissanne · Le Grand Vallon', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('huile-olive.jpg') },
+    { n:'Coffret huile d’olive, 3 goûts', b:'Moulin de Pélissanne', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('coffret-huile-olive-3-gouts.jpg') },
+    { n:'Vinaigres artisanaux, 11 goûts', b:'Le Goût', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('vinaigre-11-gouts.jpg') },
+    { n:'Vinaigre à la pulpe de poivron & piment d’Espelette', b:'Le Goût', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('vinaigre-poivron-piment-espelette.jpg') },
+    { n:'Herbes de Provence, en vrac', b:'Esprit Provence', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('herbes-provence-vrac.jpg') },
+    { n:'Coffret Herbes de Provence', b:'Esprit Provence', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('coffret-herbes-provence.jpg') },
+    { n:'Herbes pour salades & poissons', b:'Esprit Provence', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('herbes-provence-salades-poisson.jpg') },
+    { n:'Assortiment Herbes de Provence', b:'Esprit Provence', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('herbes-provence-assortiment.jpg') },
+    { n:'Sel de Camargue aromatisé, thym, ail & piment d’Espelette', b:'Esprit Provence', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('sel-camargue-aromatise.jpg') },
+    { n:'Olives, condiments & tartinables', b:'La Niçoise', c:'epicerie', s:'Huiles, vinaigres & condiments' },
+    { n:'Tapenade noire, anchoïade, crème d’aubergines', b:'Les Délices de Margaux', c:'epicerie', s:'Huiles, vinaigres & condiments' },
+
+    // ---- ÉPICERIE FINE — Conserves & spécialités salées ----
+    { n:'Soupe de poisson, croûtons et rouille', b:'Chez Fonfon', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('soupe-de-poissons.jpg') },
+    { n:'Soupe de poisson de roche', b:'Chez Fonfon', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('soupe-poisson-de-roche.jpg') },
+    { n:'Soupe au safran & bisque de homard', b:'Chez Fonfon', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('soupe-poisson-safran-bisque-homard.jpg') },
+    { n:'Tapas et conserves artisanales de la mer', b:'Pirate Cannerie', c:'epicerie', s:'Conserves & spécialités salées' },
+    { n:'Filets d’anchois et conserves provençales', b:'Conserverie Provençale', c:'epicerie', s:'Conserves & spécialités salées' },
+    { n:'Sardines camarguaise, au beurre, à la niçoise', b:'Ferrigno · Bonne Mer', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('sardines-camarguaise-beurre-nicoise.jpg') },
+    { n:'Sardines aux saveurs, pastis, pesto, confit d’oignon, fenouil & anis', b:'Ferrigno · Bonne Mer', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('sardines-saveurs.jpg') },
+    { n:'Sardines, thon, maquereaux & anchois', b:'Ferrigno · Bonne Mer', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('sardines.jpg') },
+    { n:'Soupes bio et veloutés', b:'Les Cocottes de Clarisse', c:'epicerie', s:'Conserves & spécialités salées' },
+    { n:'Soupes froides et coulis', b:'Le Jardin de mon Père', c:'epicerie', s:'Conserves & spécialités salées' },
+    { n:'Terrines, plats cuisinés & spécialités de montagne', b:'Conserverie des Alpes', c:'epicerie', s:'Conserves & spécialités salées' },
+    { n:'Foie gras, terrines & confits de canard', b:'Manoir d’Alexandre', c:'epicerie', s:'Conserves & spécialités salées' },
+
+    // ---- ÉPICERIE FINE — Apéritif ----
+    { n:'Chips à la farine de pois chiches', b:'Chips de Panisse', c:'epicerie', s:'Apéritif' },
+    { n:'Chips artisanales', b:'Père Gourmand', c:'epicerie', s:'Apéritif' },
+    { n:'Boîte apéros & tapas', c:'epicerie', s:'Apéritif', img:IMG('boite-aperos-tapas.jpg') },
+    { n:'Olives et spécialités apéritives', b:'La Niçoise', c:'epicerie', s:'Apéritif' },
+    { n:'Tartinables provençaux', b:'Les Délices de Margaux', c:'epicerie', s:'Apéritif' },
+
+    // ---- ÉPICERIE FINE — Produits frais & gastronomie ----
+    { n:'Pâtes fraîches, gnocchis et raviolis', b:'Castelli', c:'epicerie', s:'Produits frais & gastronomie' },
+    { n:'Fromages de chèvre', b:'Karine Pédini', c:'epicerie', s:'Produits frais & gastronomie' },
+    { n:'Saumon fumé et poutargue', b:'Le Fumeur de Provence', c:'epicerie', s:'Produits frais & gastronomie' },
+    { n:'Yaourts, fromages et lait', b:'GERENTES', c:'epicerie', s:'Produits frais & gastronomie' },
+    { n:'Jambon à l’os / ciboulette & herbes de Provence', b:'Jambon artisanal du Var', c:'epicerie', s:'Produits frais & gastronomie' },
+    { n:'Œufs frais, pack de 6', b:'Ferme de Trets', c:'epicerie', s:'Produits frais & gastronomie', img:IMG('oeufs-frais-pack-6.jpg') },
+    { n:'Œufs frais, pack de 12', b:'Ferme de Trets', c:'epicerie', s:'Produits frais & gastronomie', img:IMG('oeufs-frais-pack-12.jpg') },
+    { n:'Œufs frais', b:'Ferme de Trets', c:'epicerie', s:'Produits frais & gastronomie', img:IMG('oeufs-frais.jpg') },
+
+    // ---- BOISSONS & VINS — Jus & sirops ----
+    { n:'Jus de fruits et nectars artisanaux', b:'Pressoir de Provence', c:'boissons', s:'Jus & sirops' },
+    { n:'Sirops', b:'Giffard', c:'boissons', s:'Jus & sirops' },
+
+    // ---- BOISSONS & VINS — Café, thé & infusions ----
+    { n:'Café italien / espresso', b:'Mokador', c:'boissons', s:'Café, thé & infusions' },
+    { n:'Thés et tisanes', b:'Maison Bourgeon', c:'boissons', s:'Café, thé & infusions' },
+    { n:'Tisanes', b:'Le Roy René', c:'boissons', s:'Café, thé & infusions' },
+
+    // ---- BOISSONS & VINS — Vins ----
+    { n:'Vin blanc sec', b:'Famille Long · La Restanque', c:'boissons', s:'Vins' },
+    { n:'Vins rouges, rosés et blancs AOP Coteaux d’Aix-en-Provence', b:'Château Virant', c:'boissons', s:'Vins' },
+
+    // ---- BOISSONS & VINS — Gamme corse ----
+    { n:'Boissons corses', c:'boissons', s:'Gamme corse' },
+    { n:'Bières corses', c:'boissons', s:'Gamme corse' },
+    { n:'Vins corses', c:'boissons', s:'Gamme corse' },
+
+    // ---- CONFISERIE ----
+    { n:'Chocolats, amandes et noisettes enrobées, pâtes de fruits', b:'François Doucet', c:'confiserie' },
+    { n:'Calissons d’Aix, nougats blancs et noirs', b:'Le Roy René', c:'confiserie' },
+    { n:'Chocolats artisanaux Bean-to-Bar', b:'La Baleine à Cabosse', c:'confiserie' },
+    { n:'Tartes des Alpes : framboise, abricot, miel, noix, amandes', b:'Tarte Alpes', c:'confiserie' },
+    { n:'Biscuits artisanaux et sablés', b:'Maison Craquelin', c:'confiserie' },
+    { n:'Croquants provençaux aux amandes', b:'Chams Diffusion', c:'confiserie' },
+    { n:'Confitures artisanales', b:'Lou Cantoun', c:'confiserie' },
+    { n:'Miels de montagne et de lavande', b:'Patrick Jouglar', c:'confiserie' },
+    { n:'Miels de la Sainte-Baume : lavande, thym, toutes fleurs', b:'Mathieu Ghis', c:'confiserie' },
+    { n:'Glaces artisanales', b:'Ravi', c:'confiserie' },
+];
+
+/* ============ STATE & RENDER ============ */
+let state = { cat: 'fruits', sub: null };
+
+function renderIntro() {
+    const wrap = document.getElementById('catIntro');
+    const intro = CAT_INTROS[state.cat];
+    if (!intro) { wrap.innerHTML = ''; return; }
+    wrap.innerHTML = `
+        <div class="cat-intro__inner">
+            <div class="cat-intro__text">
+                <h2 class="cat-intro__title">${intro.title}</h2>
+                ${intro.badge ? `<div class="cat-intro__badge"><span class="star">★</span>${intro.badge}</div>` : ''}
+                ${intro.paras.map(p => `<p>${p}</p>`).join('')}
+            </div>
+            <div class="cat-intro__img">
+                <img src="${intro.img}" alt="${intro.alt}" loading="lazy">
+            </div>
+        </div>`;
+}
+
+function renderCatTabs() {
+    const wrap = document.getElementById('catTabs');
+    wrap.innerHTML = CATEGORIES.map(cat =>
+        `<button data-cat="${cat.id}" class="${cat.id === state.cat ? 'is-active' : ''}">${cat.label}</button>`
+    ).join('');
+    wrap.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            state.cat = btn.dataset.cat;
+            state.sub = null;
+            renderCatTabs();
+            renderSubTabs();
+            renderIntro();
+            renderGrid();
+        });
+    });
+}
+
+function renderSubTabs() {
+    const wrap = document.getElementById('subTabs');
+    const cat = CATEGORIES.find(c => c.id === state.cat);
+    if (!cat || !cat.subs.length) { wrap.innerHTML = ''; return; }
+    const allBtn = `<button data-sub="" class="${!state.sub ? 'is-active' : ''}">Tout voir</button>`;
+    const subs = cat.subs.map(s =>
+        `<button data-sub="${s}" class="${state.sub === s ? 'is-active' : ''}">${s}</button>`
+    ).join('');
+    wrap.innerHTML = allBtn + subs;
+    wrap.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            state.sub = btn.dataset.sub || null;
+            renderSubTabs();
+            renderGrid();
+        });
+    });
+}
+
+function cardHTML(p) {
+    const media = p.img
+        ? `<img src="${p.img}" alt="${p.n}" loading="lazy">`
+        : `<div class="product-card__placeholder"><span class="ico">🖼️</span><span>Image manquante</span></div>`;
+    const tags = [];
+    if (p.t) tags.push(`<span class="product-card__tag product-card__tag--type">${p.t}</span>`);
+    if (p.s) tags.push(`<span class="product-card__tag">${p.s}</span>`);
+    return `
+        <div class="product-card reveal">
+            <div class="product-card__media">${media}</div>
+            <div class="product-card__body">
+                <div class="product-card__tags">${tags.join('')}</div>
+                <div class="product-card__name">${p.n}</div>
+                ${p.b ? `<div class="product-card__brand">${p.b}</div>` : ''}
+            </div>
+        </div>`;
+}
+
+let revealObs = null;
+
+function renderGrid() {
+    const filtered = PRODUCTS.filter(p => p.c === state.cat && (!state.sub || p.s === state.sub));
+    const grid = document.getElementById('productGrid');
+    const empty = document.getElementById('resultsEmpty');
+    grid.innerHTML = filtered.map(cardHTML).join('');
+    document.getElementById('resultsCount').innerHTML = `<strong>${filtered.length}</strong> produit${filtered.length > 1 ? 's' : ''} trouvé${filtered.length > 1 ? 's' : ''}`;
+    empty.style.display = filtered.length ? 'none' : 'block';
+
+    if (revealObs) revealObs.disconnect();
+    revealObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObs.unobserve(e.target); }
+        });
+    }, { threshold: 0.1 });
+    grid.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+}
+
+/* ============ HASH ROUTING ============ */
+function applyHash() {
+    const hash = location.hash.replace('#', '');
+    const map = { fruits: 'fruits', epicerie: 'epicerie', boissons: 'boissons', cave: 'boissons', confiserie: 'confiserie' };
+    if (map[hash]) {
+        state.cat = map[hash];
+        state.sub = hash === 'cave' ? 'Vins' : null;
+    }
+}
+
+applyHash();
+renderCatTabs();
+renderSubTabs();
+renderIntro();
+renderGrid();
+window.addEventListener('hashchange', () => { applyHash(); renderCatTabs(); renderSubTabs(); renderIntro(); renderGrid(); });
+
+/* ============ NAV BURGER ============ */
+const burger = document.getElementById('burgerBtn');
+const drawer = document.getElementById('drawer');
+const drawerClose = document.getElementById('drawerClose');
+burger.addEventListener('click', () => drawer.classList.add('is-open'));
+drawerClose.addEventListener('click', () => drawer.classList.remove('is-open'));
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('is-open')));
 </script>
 </body>
 </html>
