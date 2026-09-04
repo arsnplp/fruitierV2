@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Producteurs – Le Fruitier · La Destrousse</title>
-    <meta name="description" content="Rencontrez Léon, Sarah et Rémi Laurent, nos agriculteurs partenaires en Provence, et découvrez les engagements du Fruitier pour une agriculture locale et raisonnée.">
-    <link rel="icon" type="image/png" href="image/LOGO.png">
+    <title>Nos producteurs locaux de Provence – Le Fruitier</title>
+    <meta name="description" content="Découvrez les agriculteurs et artisans partenaires du Fruitier en Provence : circuit court, agriculture raisonnée et savoir-faire local depuis plus de 20 ans.">
+    <link rel="canonical" href="nos-producteurs.html">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Le Fruitier">
+    <meta name="geo.region" content="FR-13">
+    <meta name="geo.placename" content="La Destrousse">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Le Fruitier">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Nos producteurs locaux de Provence – Le Fruitier">
+    <meta property="og:description" content="Découvrez les agriculteurs et artisans partenaires du Fruitier en Provence : circuit court, agriculture raisonnée et savoir-faire local depuis plus de 20 ans.">
+    <meta property="og:image" content="image/producteur/nos-producteurs-locaux-provence.jpg">
+    <meta property="og:image:alt" content="Nos producteurs partenaires en Provence">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nos producteurs locaux de Provence – Le Fruitier">
+    <meta name="twitter:description" content="Découvrez les agriculteurs et artisans partenaires du Fruitier en Provence : circuit court, agriculture raisonnée et savoir-faire local depuis plus de 20 ans.">
+    <meta name="twitter:image" content="image/producteur/nos-producteurs-locaux-provence.jpg">
+    <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -42,7 +60,7 @@
             position:relative;min-height:660px;display:flex;flex-direction:column;color:#fff;
             background:
                 linear-gradient(90deg,rgba(10,14,8,.9) 0%,rgba(10,14,8,.66) 40%,rgba(10,14,8,.28) 72%,rgba(10,14,8,.08) 100%),
-                url('image/producteur/header.png') center/cover no-repeat;
+                url('image/producteur/nos-producteurs-locaux-provence.jpg') center/cover no-repeat;
         }
         /* NAV — identique au reste du site */
         .nav{position:fixed;inset:0 0 auto 0;z-index:900;padding:0 3.5rem;background:rgba(245,245,239,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 2px 22px rgba(95,56,23,.06);}
@@ -192,12 +210,11 @@
 <nav class="nav" id="nav">
     <div class="nav__inner">
         <a href="index.html" class="nav__logo">
-            <img src="image/LOGO.png" alt="Le Fruitier" class="nav__logo-img">
+            <img src="image/logo-le-fruitier-la-destrousse.png" alt="Le Fruitier" class="nav__logo-img" fetchpriority="high" decoding="async">
         </a>
         <ul class="nav__menu">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="produits.html">Nos Produits</a></li>
-            <li><a href="produits-regionaux.html" class="nav__region">Produits Régionaux</a></li>
+            <li><a href="produits.html">Nos Produits Régionaux</a></li>
             <li><a href="nos-producteurs.html" class="active">Nos Producteurs</a></li>
             <li><a href="offrir.html">Pour Offrir</a></li>
             <li><a href="professionnels.html">Professionnels</a></li>
@@ -215,8 +232,7 @@
     <button class="drawer__close" id="drawerClose">✕</button>
     <ul class="drawer__menu">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="produits.html">Nos Produits</a></li>
-        <li><a href="produits-regionaux.html" class="nav__region">Produits Régionaux</a></li>
+        <li><a href="produits.html">Nos Produits Régionaux</a></li>
         <li><a href="nos-producteurs.html">Nos Producteurs</a></li>
         <li><a href="offrir.html">Pour Offrir</a></li>
         <li><a href="professionnels.html">Professionnels</a></li>
@@ -244,7 +260,7 @@
 <section class="producteurs" id="leon-sarah">
     <div class="producteurs__visual reveal-l">
         <p class="producteurs__farmer-title">Léon &amp; Sarah</p>
-        <img src="image/producteur/photoPaysan.png" alt="Léon et Sarah, maraîchers partenaires">
+        <img src="image/producteur/agriculteur-partenaire-leon-sarah.jpg" alt="Léon et Sarah, maraîchers partenaires" loading="lazy" decoding="async">
         <p class="producteurs__farmer-caption">Maraîchers depuis 5 générations</p>
     </div>
     <div class="producteurs__text reveal-r">
@@ -267,7 +283,7 @@
     </div>
     <div class="producteurs__visual reveal-r">
         <p class="producteurs__farmer-title">Rémi Laurent</p>
-        <img src="image/producteur/paysan2.png" alt="Rémi Laurent, maraîcher partenaire">
+        <img src="image/producteur/agriculteur-partenaire-remi-laurent.jpg" alt="Rémi Laurent, maraîcher partenaire" loading="lazy" decoding="async">
         <p class="producteurs__farmer-caption">Notre maraîcher fraises et tomates</p>
     </div>
 </section>
@@ -306,7 +322,7 @@
     <div class="engagements__cta reveal">
         <span class="engagements__cta-line"></span>
         <svg class="engagements__cta-leaf" viewBox="0 0 24 20"><path d="M12 20V10"/><path d="M12 10c0-4-3-7-7-7 0 4 3 7 7 7z"/><path d="M12 6c0-3 2-5 5-5 0 3-2 5-5 5z"/></svg>
-        <a href="produits-regionaux.html" class="btn btn--dark">DÉCOUVRIR NOS PRODUITS RÉGIONAUX <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="produits.html" class="btn btn--dark">DÉCOUVRIR NOS PRODUITS RÉGIONAUX <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         <svg class="engagements__cta-leaf" viewBox="0 0 24 20"><path d="M12 20V10"/><path d="M12 10c0-4-3-7-7-7 0 4 3 7 7 7z"/><path d="M12 6c0-3 2-5 5-5 0 3-2 5-5 5z"/></svg>
         <span class="engagements__cta-line"></span>
     </div>
@@ -330,7 +346,7 @@
             <h4>Navigation</h4>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="produits.html">Nos Produits</a></li>
+                <li><a href="produits.html">Nos Produits Régionaux</a></li>
                 <li><a href="offrir.html">Pour Offrir</a></li>
                 <li><a href="professionnels.html">Professionnels</a></li>
                 <li><a href="a-propos.html">À Propos</a></li>
@@ -344,7 +360,6 @@
                 <li><a href="produits.html#boissons">Boissons &amp; Vins</a></li>
                 <li><a href="produits.html#confiserie">Confiserie</a></li>
                 <li><a href="offrir.html">Paniers &amp; Cadeaux</a></li>
-                <li><a href="produits-regionaux.html">Produits Régionaux</a></li>
             </ul>
         </div>
         <div class="footer__col">
