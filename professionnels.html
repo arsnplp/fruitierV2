@@ -99,7 +99,7 @@
         .nav__menu a:not(.nav__cta)::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:#8FB93E;transition:width .3s var(--ease);}
         .nav__menu a:not(.nav__cta):hover::after,.nav__menu a.active::after{width:100%;}
         .nav__cta{background:#8FB93E!important;color:#ffffff!important;padding:.55rem 1.3rem;border-radius:8px;}
-        .nav__cta:hover{background:#5F3817!important;color:#fff!important;}
+        .nav__cta:hover{background:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12)),#8FB93E!important;color:#ffffff!important;box-shadow:inset 0 0 0 1.5px #ffffff;}
         .nav__menu a.nav__region{color:#5F3817!important;}
         .nav__burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
         .nav__burger span{display:block;width:24px;height:2px;background:#5F3817;}
@@ -190,7 +190,7 @@
             .p2-offers{padding-top:5rem;padding-bottom:4rem;}
         }
         @media(max-width:980px){
-            .p2-hero-v2{min-height:640px;}
+            .p2-hero-v2{min-height:660px;}
             .p2-offers__grid{grid-template-columns:1fr;max-width:480px;}
             .p2-cta__inner{grid-template-columns:1fr;}
             .p2-cta__img{max-width:280px;margin:0 auto;}
@@ -199,6 +199,9 @@
             .p2-hero-v2__content,.p2-offers,.p2-cta,.p2-footer{padding-left:1.3rem;padding-right:1.3rem;}
             .p2-footer__inner{flex-direction:column;align-items:flex-start;}
         }
+        /* hauteurs identiques au header de l'accueil */
+        @media(max-width:600px){.p2-hero-v2{min-height:860px;}}
+        @media(max-width:359px){.p2-hero-v2{min-height:940px;}}
     </style>
 </head>
 <body>

@@ -55,8 +55,8 @@
         .btn--dark:hover{background:var(--green);}
         .btn--kiwi{background:var(--kiwi);color:var(--white);}
         .btn--kiwi:hover{background:#71962E;color:var(--white);}
-        .btn--ghost{background:transparent;border:1.5px solid var(--brown);color:var(--brown);}
-        .btn--ghost:hover{background:var(--brown);color:var(--white);}
+        .btn--ghost{background:transparent;border:1.5px solid rgba(255,255,255,.55);color:var(--white);}
+        .btn--ghost:hover{background:rgba(255,255,255,.12);border-color:var(--white);}
 
         /* NAV */
         .nav{position:fixed;inset:0 0 auto 0;z-index:900;padding:0 3.5rem;background:rgba(245,245,239,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 2px 22px rgba(95,56,23,.06);}
@@ -68,7 +68,7 @@
         .nav__menu a:not(.nav__cta)::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--kiwi);transition:width .3s var(--ease-out);}
         .nav__menu a:not(.nav__cta):hover::after,.nav__menu a.active::after{width:100%;}
         .nav__cta{background:var(--kiwi)!important;color:#ffffff!important;padding:.55rem 1.3rem;border-radius:var(--radius-sm);}
-        .nav__cta:hover{background:var(--brown)!important;color:var(--white)!important;}
+        .nav__cta:hover{background:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12)),#8FB93E!important;color:#ffffff!important;box-shadow:inset 0 0 0 1.5px #ffffff;}
         .nav__menu a.nav__region{color:var(--brown)!important;}
         .nav__burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
         .nav__burger span{display:block;width:24px;height:2px;background:var(--brown);}
@@ -258,7 +258,7 @@
             <p class="p-hero2__lead">Faites plaisir et faites-vous plaisir : paniers garnis, cadeaux gourmands et produits du terroir provençal composés avec soin.</p>
             <div class="p-hero2__btns">
                 <a href="#offrir" class="btn btn--kiwi">Découvrir nos paniers <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                <a href="contact.html" class="btn btn--ghost" style="border-color:rgba(255,255,255,0.5);color:white;">Nous contacter</a>
+                <a href="contact.html" class="btn btn--ghost">Nous contacter</a>
             </div>
         </div>
         <div class="p-hero2__visual">
