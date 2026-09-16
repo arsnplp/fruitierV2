@@ -476,7 +476,7 @@
            SECTION 2 – ACTUALITÉS (BLOG SLIDER)
         ════════════════════════════════════════════ */
         .actualites {
-            background: var(--brown);
+            background: #F3EEE2; /* beige des cartes Professionnels */
             padding: 7rem 7rem 6rem;
             overflow: hidden;
         }
@@ -489,9 +489,9 @@
         .blog-btns { display: flex; gap: 0.8rem; }
         .blog-btn {
             width: 46px; height: 46px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            color: white;
+            background: #1C2B1A;
+            border: 1px solid #1C2B1A;
+            color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -499,7 +499,7 @@
             border-radius: var(--radius-sm);
             transition: background 0.3s, border-color 0.3s, color 0.3s;
         }
-        .blog-btn:hover { background: var(--kiwi); border-color: var(--kiwi); color: var(--brown); }
+        .blog-btn:hover { background: #5B6B3F; border-color: #5B6B3F; color: var(--white); }
 
         .blog-track { overflow: hidden; }
         .blog-carousel {
@@ -510,13 +510,13 @@
 
         .blog-card {
             flex: 0 0 calc(33.333% - 1.34rem);
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: var(--white);
+            border: 1px solid transparent;
             border-radius: var(--radius);
             overflow: hidden;
             transition: transform 0.36s, background 0.36s;
         }
-        .blog-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-6px); }
+        .blog-card:hover { transform: translateY(-6px); box-shadow: 0 20px 46px rgba(28,43,26,.14); }
 
         .blog-card__img {
             width: 100%;
@@ -533,19 +533,19 @@
             font-weight:800;
             letter-spacing:.08em;
             text-transform: uppercase;
-            color: var(--kiwi);
+            color: #71962E;
             margin-bottom: 0.9rem;
         }
         .blog-card__title {
             font-family:'Bebas Neue',sans-serif;
             font-size: 1.3rem;
             font-weight:400;
-            color: var(--white);
+            color: #1C2B1A;
             line-height: 1.28;
             margin-bottom: 0.9rem;letter-spacing:.5px;}
         .blog-card__excerpt {
             font-size: 0.88rem;
-            color: rgba(255,255,255,0.58);
+            color: rgba(28,43,26,.62);
             line-height: 1.72;
             margin-bottom: 1.4rem;
         }
@@ -557,7 +557,7 @@
             font-weight:800;
             letter-spacing:.08em;
             text-transform: uppercase;
-            color: var(--kiwi);
+            color: #71962E;
             transition: gap 0.3s;
         }
         .blog-link:hover { gap: 1rem; }
@@ -1276,7 +1276,7 @@
     <div class="actualites__head">
         <div>
             <span class="label label--kiwi">Actualités</span>
-            <h2 class="display display--white">L'ACTUALITÉ<br>CHEZ LE FRUITIER</h2>
+            <h2 class="display" style="color:#1C2B1A;">L'ACTUALITÉ<br>CHEZ LE FRUITIER</h2>
         </div>
         <div class="blog-btns">
             <button class="blog-btn" id="blogPrev" aria-label="Article précédent">
