@@ -56,7 +56,7 @@
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         /* ─── VARIABLES ─────────────────────────────── */
         :root {
@@ -81,7 +81,7 @@
         html { scroll-behavior: smooth; font-size: 17.5px; overflow-x: hidden; }
 
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family:'Montserrat',sans-serif;
             background: var(--cream);
             color: var(--brown);
             overflow-x: hidden;
@@ -106,12 +106,11 @@
         .label--kiwi   { background: rgba(153,193,34,0.18); color: var(--kiwi); }
 
         h2.display {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: clamp(2rem, 3.5vw, 3.4rem);
-            font-weight: 600;
+            font-weight:400;
             line-height: 1.1;
-            color: var(--brown);
-        }
+            color: var(--brown);letter-spacing:.5px;}
         h2.display--white { color: var(--white); }
 
         .lead {
@@ -277,12 +276,11 @@
         .drawer__menu a {
             display: block;
             padding: 1.1rem 0;
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: 2rem;
-            font-weight: 600;
+            font-weight:400;
             color: var(--white);
-            transition: color 0.3s;
-        }
+            transition: color 0.3s;letter-spacing:.5px;}
         .drawer__menu a:hover { color: var(--kiwi); }
 
         /* ════════════════════════════════════════════
@@ -409,13 +407,12 @@
             justify-content: center;
         }
         .promesse__text h1 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: clamp(1.9rem, 2.8vw, 3rem);
-            font-weight: 600;
+            font-weight:400;
             line-height: 1.15;
             color: var(--brown);
-            margin-bottom: 1.8rem;
-        }
+            margin-bottom: 1.8rem;letter-spacing:.5px;}
         .promesse__text p { margin-bottom: 1.4rem; }
 
         .promesse__stats {
@@ -426,13 +423,12 @@
             border-top: 1px solid var(--sage);
         }
         .stat__num {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: 2.6rem;
-            font-weight: 700;
+            font-weight:400;
             color: var(--green);
             line-height: 1;
-            display: block;
-        }
+            display: block;letter-spacing:.5px;}
         .stat__lbl {
             font-size: 0.7rem;
             color: var(--text-muted);
@@ -443,7 +439,11 @@
         .promesse__visual {
             position: relative;
             overflow: hidden;
-            min-height: 540px;
+            min-height: 480px;
+            /* image en carte : ne colle plus au header ni aux bords */
+            margin: 5rem 5rem 5rem 0;
+            border-radius: var(--radius);
+            box-shadow: 0 24px 60px rgba(95,56,23,0.16);
         }
         .promesse__visual img {
             width: 100%;
@@ -456,18 +456,17 @@
         .promesse__badge {
             position: absolute;
             bottom: 2.5rem;
-            left: -1px;
+            left: 0;
             background: var(--kiwi);
             color: var(--brown);
             padding: 1.2rem 1.8rem;
         }
         .promesse__badge strong {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: 1.4rem;
-            font-weight: 700;
+            font-weight:400;
             display: block;
-            line-height: 1.1;
-        }
+            line-height: 1.1;letter-spacing:.5px;}
         .promesse__badge span {
             font-size: 0.6rem;
             font-weight: 700;
@@ -542,13 +541,12 @@
             margin-bottom: 0.9rem;
         }
         .blog-card__title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: 1.3rem;
-            font-weight: 600;
+            font-weight:400;
             color: var(--white);
             line-height: 1.28;
-            margin-bottom: 0.9rem;
-        }
+            margin-bottom: 0.9rem;letter-spacing:.5px;}
         .blog-card__excerpt {
             font-size: 0.88rem;
             color: rgba(255,255,255,0.58);
@@ -633,12 +631,11 @@
             margin-bottom: 0.4rem;
         }
         .pcell__title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight:400;
             color: var(--white);
-            line-height: 1.2;
-        }
+            line-height: 1.2;letter-spacing:.5px;}
 
         .pcell__arrow {
             position: absolute;
@@ -692,12 +689,11 @@
             max-width: 230px;
         }
         .prod-badge__name {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: 1.35rem;
-            font-weight: 700;
+            font-weight:400;
             line-height: 1.1;
-            margin-bottom: 0.3rem;
-        }
+            margin-bottom: 0.3rem;letter-spacing:.5px;}
         .prod-badge__role {
             font-size: 0.58rem;
             font-weight: 700;
@@ -778,13 +774,12 @@
         .region-card:hover { background: var(--green); transform: translateY(-4px); }
         .region-card__ico { font-size: 2.2rem; margin-bottom: 0.9rem; }
         .region-card__name {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight:400;
             color: var(--brown);
             margin-bottom: 0.3rem;
-            transition: color 0.34s;
-        }
+            transition: color 0.34s;letter-spacing:.5px;}
         .region-card__prod {
             font-size: 0.72rem;
             color: var(--text-muted);
@@ -858,12 +853,11 @@
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
         .footer__brand-name {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size: 2rem;
-            font-weight: 700;
+            font-weight:400;
             color: var(--white);
-            line-height: 1;
-        }
+            line-height: 1;letter-spacing:.5px;}
         .footer__brand-sub {
             font-size: 0.55rem;
             letter-spacing: 0.24em;
@@ -1055,6 +1049,7 @@
             .nav__menu { gap: 0.7rem; }
             .nav__menu a { font-size: 0.68rem; letter-spacing: 0.02em; }
             .promesse__text { padding: 5rem 3.5rem 5rem 3rem; }
+            .promesse__visual { margin: 4rem 3rem 4rem 0; }
             .hero { padding: 4.3rem 4rem 5rem; }
             .actualites, .carte, .footer { padding-left: 3rem; padding-right: 3rem; }
             .producteurs__text { padding: 4rem 4rem 4rem 4rem; }
@@ -1067,8 +1062,8 @@
             .nav__burger { display: flex; }
 
             .promesse { grid-template-columns: 1fr; }
-            .promesse__visual { min-height: 360px; }
-            .promesse__badge { left: 2rem; }
+            .promesse__visual { min-height: 360px; margin: 0 3rem 4rem; }
+            .promesse__badge { left: 0; }
 
             .producteurs { grid-template-columns: 1fr; }
             .producteurs__visual { min-height: 380px; }
@@ -1100,6 +1095,7 @@
             .hero { padding: 2.8rem 1.5rem 4rem; }
 
             .promesse__text { padding: 4rem 1.5rem; }
+            .promesse__visual { margin: 0 1.5rem 3rem; }
             .actualites, .carte, .footer { padding: 4rem 1.5rem; }
             .grid-head { padding: 4rem 1.5rem 2rem; }
 
@@ -1203,7 +1199,7 @@
 <section class="promesse" id="a-propos">
     <div class="promesse__text reveal-l">
         <span class="label">Notre Engagement</span>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,2.8vw,3rem);font-weight:600;line-height:1.15;color:var(--brown);margin-bottom:1.8rem;">
+        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,2.8vw,3rem);font-weight:400;line-height:1.15;color:var(--brown);margin-bottom:1.8rem;letter-spacing:.5px;">
             Le comptoir de saveurs locales et d'épicerie fine à La Destrousse
         </h2>
         <p class="lead">Du repas de tous les jours aux instants d'exception, Le Fruitier vous accompagne au quotidien. Notre premier engagement&nbsp;? Vous offrir des fruits et légumes frais, savoureux et accessibles pour régaler toute la famille midi et soir.</p>

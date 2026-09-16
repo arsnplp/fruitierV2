@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         :root {
             --olive:#8B8F47; --green:#616D29; --kiwi:#99C122; --sage:#D2D4C1;
@@ -37,13 +37,13 @@
         }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
         html{scroll-behavior:smooth;font-size:17.5px;overflow-x:hidden;}
-        body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
+        body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
         img{display:block;max-width:100%;}
         a{text-decoration:none;color:inherit;}
         ul{list-style:none;}
 
         .label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding:.45rem 1rem;background:var(--sage);color:var(--green);margin-bottom:1.4rem;}
-        h2.display{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:600;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;}
+        h2.display{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:400;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;letter-spacing:.5px;}
         .lead{font-size:1rem;line-height:1.88;color:var(--text-muted);margin-bottom:1rem;}
 
         .btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;transition:background .28s,color .28s;cursor:pointer;border:none;margin-top:1rem;border-radius:var(--radius-sm);}
@@ -78,7 +78,7 @@
         .drawer__close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
         .drawer__menu{list-style:none;text-align:center;}
         .drawer__menu li{margin-bottom:1.8rem;}
-        .drawer__menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--white);letter-spacing:.04em;}
+        .drawer__menu a{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;font-weight:400;color:var(--white);letter-spacing:.04em;}
 
         /* HERO (style "professionnels", texte à gauche / image à droite) */
         .p-hero2{
@@ -112,20 +112,20 @@
 
         /* REGION SECTION */
         .region__intro{background:var(--green);color:var(--white);padding:5rem;}
-        .region__intro h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,4rem);font-weight:600;line-height:1.1;margin-bottom:1.5rem;}
+        .region__intro h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,4rem);font-weight:400;line-height:1.1;margin-bottom:1.5rem;letter-spacing:.5px;}
         .region__intro p{font-size:1rem;line-height:1.88;color:rgba(255,255,255,.78);max-width:680px;}
         .region__grid{display:grid;grid-template-columns:repeat(3,1fr);}
         .region__card{padding:3.5rem 3rem;border-right:1px solid var(--sage);}
         .region__card:last-child{border-right:none;}
         .region__card:nth-child(even){background:var(--white);}
         .region__card-icon{font-size:2rem;margin-bottom:1rem;}
-        .region__card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--brown);margin-bottom:.8rem;}
+        .region__card h3{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;font-weight:400;color:var(--brown);margin-bottom:.8rem;letter-spacing:.5px;}
         .region__card p{font-size:.92rem;line-height:1.75;color:var(--text-muted);}
 
         /* COFFRETS GRID */
         .coffrets{background:var(--white);padding:7rem 5rem;}
         .coffrets__head{text-align:center;margin-bottom:4rem;}
-        .coffrets__head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:600;line-height:1.1;color:var(--brown);margin-bottom:.8rem;}
+        .coffrets__head h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:400;line-height:1.1;color:var(--brown);margin-bottom:.8rem;letter-spacing:.5px;}
         .coffrets__head p{font-size:1rem;color:var(--text-muted);max-width:520px;margin:0 auto;}
 
         .coffrets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}
@@ -138,13 +138,13 @@
         .coffret-card:hover .coffret-card__img img{transform:scale(1.05);}
 
         .coffret-card__body{padding:1.8rem 2rem 2rem;display:flex;flex-direction:column;flex:1;}
-        .coffret-card__name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--brown);line-height:1.2;margin-bottom:1rem;}
+        .coffret-card__name{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;font-weight:400;color:var(--brown);line-height:1.2;margin-bottom:1rem;letter-spacing:.5px;}
         .coffret-card__list{list-style:none;margin-bottom:1.5rem;display:flex;flex-direction:column;gap:.4rem;flex:1;}
         .coffret-card__list li{font-size:.82rem;line-height:1.6;color:var(--text-muted);display:flex;gap:.6rem;}
         .coffret-card__list li::before{content:'·';color:var(--kiwi);font-weight:700;flex-shrink:0;}
 
         .coffret-card__footer{display:flex;align-items:center;justify-content:space-between;padding-top:1.2rem;border-top:1px solid var(--sage);margin-top:auto;}
-        .coffret-card__price{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--brown);}
+        .coffret-card__price{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;font-weight:400;color:var(--brown);letter-spacing:.5px;}
         .coffret-card__btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.7rem 1.3rem;background:var(--brown);color:var(--white);border-radius:var(--radius-sm);transition:background .25s;}
         .coffret-card__btn:hover{background:var(--green);}
         .coffret-card__btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;transition:transform .25s;}
@@ -158,7 +158,7 @@
         /* FOOTER */
         .footer{background:var(--brown);color:rgba(255,255,255,.75);font-size:.9rem;line-height:1.7;}
         .footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:3rem;padding:5rem;}
-        .footer__brand-name{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--white);margin-bottom:.3rem;}
+        .footer__brand-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;font-weight:400;color:var(--white);margin-bottom:.3rem;letter-spacing:.5px;}
         .footer__brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:block;}
         .footer__brand p{color:rgba(255,255,255,.6);max-width:280px;line-height:1.7;margin-bottom:1.5rem;}
         .footer__socials{display:flex;gap:.8rem;}

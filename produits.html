@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         :root {
             --olive:#8B8F47; --green:#616D29; --kiwi:#99C122; --sage:#D2D4C1;
@@ -38,14 +38,14 @@
         }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
         html{scroll-behavior:smooth;font-size:17.5px;overflow-x:hidden;}
-        body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
+        body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
         img{display:block;max-width:100%;}
         a{text-decoration:none;color:inherit;}
         ul{list-style:none;}
         button{font:inherit;}
 
         .label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding:.45rem 1rem;background:var(--sage);color:var(--green);margin-bottom:1.4rem;}
-        h2.display{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:600;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;}
+        h2.display{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:400;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;letter-spacing:.5px;}
         .lead{font-size:1rem;line-height:1.88;color:var(--text-muted);margin-bottom:1rem;}
 
         .btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;transition:background .28s,color .28s;cursor:pointer;border:none;margin-top:1rem;border-radius:var(--radius-sm);}
@@ -76,7 +76,7 @@
         .drawer__close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
         .drawer__menu{list-style:none;text-align:center;}
         .drawer__menu li{margin-bottom:1.8rem;}
-        .drawer__menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--white);letter-spacing:.04em;}
+        .drawer__menu a{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;font-weight:400;color:var(--white);letter-spacing:.04em;}
         .drawer__menu a:hover{color:var(--kiwi);}
 
         /* HERO PHOTO (style "professionnels") */
@@ -137,7 +137,7 @@
         .product-card__tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.15rem;}
         .product-card__tag{font-size:.6rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.28rem .55rem;border-radius:20px;background:var(--sage);color:var(--green);}
         .product-card__tag--type{background:var(--cream);color:var(--brown-mid);}
-        .product-card__name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--brown);line-height:1.25;}
+        .product-card__name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;font-weight:400;color:var(--brown);line-height:1.25;letter-spacing:.5px;}
         .product-card__brand{font-size:.74rem;color:var(--text-muted);}
         .product-card{cursor:pointer;}
         .product-card:focus-visible{outline:2.5px solid var(--kiwi);outline-offset:3px;}
@@ -157,7 +157,7 @@
         .pmodal__ph{width:100%;height:100%;min-height:340px;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.5rem;font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#8E7C50;background:repeating-linear-gradient(135deg,#ECE9DE,#ECE9DE 10px,#E3DFCF 10px,#E3DFCF 20px);}
         .pmodal__body{padding:3rem 2.8rem;display:flex;flex-direction:column;}
         .pmodal__tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem;}
-        .pmodal__name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:600;color:var(--brown);line-height:1.15;margin-bottom:.5rem;}
+        .pmodal__name{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:400;color:var(--brown);line-height:1.15;margin-bottom:.5rem;letter-spacing:.5px;}
         .pmodal__brand{font-size:.95rem;font-weight:700;color:var(--brown-mid);margin-bottom:1.4rem;}
         .pmodal__loc{display:flex;align-items:flex-start;gap:.45rem;font-size:.8rem;font-weight:700;color:var(--green);line-height:1.5;margin-bottom:1.2rem;}
         .pmodal__loc::before{content:'';flex-shrink:0;width:14px;height:14px;margin-top:.12rem;background:currentColor;-webkit-mask:var(--pin) center/contain no-repeat;mask:var(--pin) center/contain no-repeat;}
@@ -179,7 +179,7 @@
         /* FOOTER */
         .footer{background:var(--brown);color:rgba(255,255,255,.75);font-size:.9rem;line-height:1.7;}
         .footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:3rem;padding:5rem;}
-        .footer__brand-name{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--white);margin-bottom:.3rem;}
+        .footer__brand-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;font-weight:400;color:var(--white);margin-bottom:.3rem;letter-spacing:.5px;}
         .footer__brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:block;}
         .footer__brand p{color:rgba(255,255,255,.6);max-width:280px;line-height:1.7;margin-bottom:1.5rem;}
         .footer__socials{display:flex;gap:.8rem;}

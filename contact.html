@@ -56,7 +56,7 @@
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         :root {
             --olive:#8B8F47; --green:#616D29; --kiwi:#99C122; --sage:#D2D4C1;
@@ -67,7 +67,7 @@
         }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
         html{scroll-behavior:smooth;font-size:17.5px;overflow-x:hidden;}
-        body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
+        body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
         img{display:block;max-width:100%;}
         a{text-decoration:none;color:inherit;}
         ul{list-style:none;}
@@ -103,7 +103,7 @@
         .drawer__close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
         .drawer__menu{list-style:none;text-align:center;}
         .drawer__menu li{margin-bottom:1.8rem;}
-        .drawer__menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--white);letter-spacing:.04em;}
+        .drawer__menu a{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;font-weight:400;color:var(--white);letter-spacing:.04em;}
         .drawer__menu a:hover{color:var(--kiwi);}
         a.nav__region{color:var(--kiwi)!important;}
 
@@ -118,11 +118,10 @@
             display:flex;flex-direction:column;gap:3.5rem;
         }
         .contact-info__title{
-            font-family:'Cormorant Garamond',serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size:clamp(2rem,3vw,3rem);
-            font-weight:600;line-height:1.1;
-            margin-bottom:.5rem;
-        }
+            font-weight:400;line-height:1.1;
+            margin-bottom:.5rem;letter-spacing:.5px;}
         .contact-info__title span{color:var(--kiwi);}
         .info-block h3{
             font-size:.62rem;font-weight:700;letter-spacing:.28em;
@@ -131,10 +130,9 @@
         }
         .info-block address{
             font-style:normal;
-            font-family:'Cormorant Garamond',serif;
-            font-size:1.35rem;font-weight:500;
-            line-height:1.65;color:rgba(255,255,255,.88);
-        }
+            font-family:'Bebas Neue',sans-serif;
+            font-size:1.35rem;font-weight:400;
+            line-height:1.65;color:rgba(255,255,255,.88);letter-spacing:.5px;}
         .info-block p{
             font-size:.95rem;line-height:1.8;
             color:rgba(255,255,255,.72);
@@ -145,11 +143,10 @@
         .hours-row .time{font-size:.85rem;color:rgba(255,255,255,.65);}
         .hours-row .sep{flex:1;border-bottom:1px dotted rgba(255,255,255,.2);}
         .contact-info__phone{
-            font-family:'Cormorant Garamond',serif;
-            font-size:2rem;font-weight:600;
+            font-family:'Bebas Neue',sans-serif;
+            font-size:2rem;font-weight:400;
             color:var(--white);
-            transition:color .3s;
-        }
+            transition:color .3s;letter-spacing:.5px;}
         .contact-info__phone:hover{color:var(--kiwi);}
         .contact-socials{display:flex;gap:1rem;margin-top:.5rem;}
         .contact-socials a{
@@ -168,11 +165,10 @@
             display:flex;flex-direction:column;justify-content:center;
         }
         .contact-form h2{
-            font-family:'Cormorant Garamond',serif;
+            font-family:'Bebas Neue',sans-serif;
             font-size:clamp(1.8rem,2.5vw,2.6rem);
-            font-weight:600;color:var(--brown);
-            margin-bottom:.5rem;
-        }
+            font-weight:400;color:var(--brown);
+            margin-bottom:.5rem;letter-spacing:.5px;}
         .contact-form .subtitle{
             font-size:.9rem;color:var(--text-muted);
             margin-bottom:3rem;line-height:1.6;
@@ -190,7 +186,7 @@
             border:1.5px solid var(--sage);
             background:var(--cream);
             padding:.9rem 1.1rem;
-            font-family:'Nunito',sans-serif;
+            font-family:'Montserrat',sans-serif;
             font-size:.95rem;color:var(--brown);
             outline:none;
             border-radius:var(--radius-sm);
@@ -227,7 +223,7 @@
         /* FOOTER */
         .footer{background:var(--brown);color:var(--white);padding:5rem 5rem 2rem;}
         .footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:4rem;margin-bottom:4rem;}
-        .footer__brand-name{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;margin-bottom:.4rem;}
+        .footer__brand-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;font-weight:400;margin-bottom:.4rem;letter-spacing:.5px;}
         .footer__brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--kiwi);display:block;margin-bottom:1.2rem;}
         .footer__brand p{font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:280px;}
         .footer__socials{display:flex;gap:.8rem;margin-top:1.5rem;}

@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         :root {
             --olive:#8B8F47; --green:#616D29; --kiwi:#99C122; --sage:#D2D4C1;
@@ -37,13 +37,13 @@
         }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
         html{scroll-behavior:smooth;font-size:17.5px;overflow-x:hidden;scroll-snap-type:y proximity;}
-        body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
+        body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
         img{display:block;max-width:100%;}
         a{text-decoration:none;color:inherit;}
         ul{list-style:none;}
 
         .label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding:.45rem 1rem;background:var(--sage);color:var(--green);margin-bottom:1.4rem;}
-        h2.display{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:600;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;}
+        h2.display{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:400;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;letter-spacing:.5px;}
         .lead{font-size:1rem;line-height:1.88;color:var(--text-muted);margin-bottom:1rem;}
 
         .btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;transition:background .28s,color .28s;cursor:pointer;border:none;margin-top:1rem;border-radius:var(--radius-sm);}
@@ -83,7 +83,7 @@
         .drawer__close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
         .drawer__menu{list-style:none;text-align:center;}
         .drawer__menu li{margin-bottom:1.8rem;}
-        .drawer__menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--white);letter-spacing:.04em;}
+        .drawer__menu a{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;font-weight:400;color:var(--white);letter-spacing:.04em;}
         .drawer__menu a:hover{color:var(--kiwi);}
 
         @media(max-width:1300px){
@@ -125,7 +125,7 @@
         .producteurs{background:var(--white);display:grid;grid-template-columns:5fr 7fr;align-items:stretch;padding:4rem 5rem;}
         .producteurs__visual{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.2rem;padding:1.5rem;}
         .producteurs__visual img{width:100%;flex:1;min-height:0;object-fit:cover;border-radius:var(--radius);box-shadow:0 8px 32px rgba(95,56,23,0.12);}
-        .producteurs__farmer-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;font-style:italic;color:var(--green);}
+        .producteurs__farmer-title{font-family:'Caveat',cursive;font-size:2.47rem;font-weight:600;color:var(--green);}
         .producteurs__farmer-caption{font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brown);}
         .producteurs__text{padding:2rem 3rem 2rem 4rem;}
         .producteurs__text h2{font-size:clamp(2.4rem,4vw,5rem);line-height:1.05;margin-bottom:.5rem;}
@@ -168,7 +168,7 @@
         /* FOOTER */
         .footer{background:var(--brown);color:rgba(255,255,255,.75);font-size:.9rem;line-height:1.7;}
         .footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:3rem;padding:5rem;}
-        .footer__brand-name{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--white);margin-bottom:.3rem;}
+        .footer__brand-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;font-weight:400;color:var(--white);margin-bottom:.3rem;letter-spacing:.5px;}
         .footer__brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:block;}
         .footer__brand p{color:rgba(255,255,255,.6);max-width:280px;line-height:1.7;margin-bottom:1.5rem;}
         .footer__socials{display:flex;gap:.8rem;}
