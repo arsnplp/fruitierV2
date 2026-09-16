@@ -28,6 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
+        button{font-family:inherit;}
         :root {
             --olive:#8B8F47; --green:#616D29; --kiwi:#99C122; --sage:#D2D4C1;
             --cream:#F5F5EF; --brown:#5F3817; --brown-mid:#7a4920;
@@ -42,11 +43,11 @@
         a{text-decoration:none;color:inherit;}
         ul{list-style:none;}
 
-        .label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding:.45rem 1rem;background:var(--sage);color:var(--green);margin-bottom:1.4rem;}
+        .label{display:inline-block;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.6rem 1.15rem;background:var(--kiwi);color:var(--white);margin-bottom:1.2rem;border-radius:5px;}
         h2.display{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:400;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;letter-spacing:.5px;}
         .lead{font-size:1rem;line-height:1.88;color:var(--text-muted);margin-bottom:1rem;}
 
-        .btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;transition:background .28s,color .28s;cursor:pointer;border:none;margin-top:1rem;border-radius:var(--radius-sm);}
+        .btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:1rem 1.7rem;transition:background .28s,color .28s;cursor:pointer;border:none;margin-top:1rem;border-radius:5px;}
         .btn svg{flex-shrink:0;transition:transform .28s;}
         .btn:hover svg{transform:translateX(4px);}
         .arr{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
@@ -126,7 +127,7 @@
         .producteurs__visual{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.2rem;padding:1.5rem;}
         .producteurs__visual img{width:100%;flex:1;min-height:0;object-fit:cover;border-radius:var(--radius);box-shadow:0 8px 32px rgba(95,56,23,0.12);}
         .producteurs__farmer-title{font-family:'Caveat',cursive;font-size:2.47rem;font-weight:600;color:var(--green);}
-        .producteurs__farmer-caption{font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brown);}
+        .producteurs__farmer-caption{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brown);}
         .producteurs__text{padding:2rem 3rem 2rem 4rem;}
         .producteurs__text h2{font-size:clamp(2.4rem,4vw,5rem);line-height:1.05;margin-bottom:.5rem;}
         .producteurs__text p{margin-bottom:1.2rem;color:var(--brown);font-size:1rem;line-height:1.75;}
@@ -139,7 +140,7 @@
         .engagements__branch svg{width:100%;height:100%;fill:none;stroke:var(--green);stroke-width:1;}
 
         .engagements__intro{max-width:760px;margin:0 auto 4rem;position:relative;z-index:1;}
-        .engagements__eyebrow{display:block;font-size:.72rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--green);margin-bottom:1.2rem;}
+        .engagements__eyebrow{display:block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:1.2rem;}
         .engagements__ornament{display:flex;align-items:center;justify-content:center;gap:.7rem;margin-bottom:1.7rem;}
         .engagements__ornament::before,.engagements__ornament::after{content:'';width:44px;height:1px;background:var(--sage);}
         .engagements__ornament svg{width:18px;height:16px;fill:none;stroke:var(--green);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
@@ -169,12 +170,12 @@
         .footer{background:var(--brown);color:rgba(255,255,255,.75);font-size:.9rem;line-height:1.7;}
         .footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:3rem;padding:5rem;}
         .footer__brand-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;font-weight:400;color:var(--white);margin-bottom:.3rem;letter-spacing:.5px;}
-        .footer__brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:block;}
+        .footer__brand-sub{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:block;}
         .footer__brand p{color:rgba(255,255,255,.6);max-width:280px;line-height:1.7;margin-bottom:1.5rem;}
         .footer__socials{display:flex;gap:.8rem;}
         .social{width:36px;height:36px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.7);transition:background .25s,color .25s,border-color .25s;}
         .social:hover{background:var(--kiwi);color:var(--brown);border-color:var(--kiwi);}
-        .footer__col h4{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--white);margin-bottom:1.4rem;}
+        .footer__col h4{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:1.4rem;}
         .footer__col ul li{margin-bottom:.6rem;}
         .footer__col ul a{color:rgba(255,255,255,.6);transition:color .25s;}
         .footer__col ul a:hover{color:var(--kiwi);}
@@ -229,7 +230,7 @@
 
 <!-- DRAWER MOBILE -->
 <div class="drawer" id="drawer">
-    <button class="drawer__close" id="drawerClose">✕</button>
+    <button class="drawer__close" id="drawerClose" aria-label="Fermer le menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <ul class="drawer__menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="produits.html">Nos Produits Régionaux</a></li>
@@ -268,7 +269,7 @@
         <h2 class="display">RENCONTRE AVEC LÉON ET SARAH :<br><span style="color:var(--kiwi)">L'ÂME DE NOS TERRES</span></h2>
         <p>Léon et Sarah sont maraîchers depuis 5 générations, installés à Aubagne à une époque charnière pour la Provence. Travailler avec eux, c'est toucher à l'histoire vivante de notre région.</p>
         <p>Leur famille a pris racine dans le sillage d'un événement fondateur : la construction du canal de la Durance au XIXe siècle, qui transforma Marseille et fit fleurir toute la plaine provençale.</p>
-        <p>Depuis lors, leur façon de cultiver n'a jamais changé. Ils perpétuent les gestes d'autrefois dans le respect total de la terre et des saisons. 🎥 Un reportage exclusif arrive très bientôt !</p>
+        <p>Depuis lors, leur façon de cultiver n'a jamais changé. Ils perpétuent les gestes d'autrefois dans le respect total de la terre et des saisons. Un reportage exclusif arrive très bientôt !</p>
     </div>
 </section>
 

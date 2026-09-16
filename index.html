@@ -58,6 +58,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
+        button{font-family:inherit;}
         /* ─── VARIABLES ─────────────────────────────── */
         :root {
             --olive:      #8B8F47;
@@ -93,17 +94,16 @@
         /* ─── TYPOGRAPHY HELPERS ────────────────────── */
         .label {
             display: inline-block;
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            padding: 0.45rem 1rem;
-            background: var(--sage);
-            color: var(--green);
-            margin-bottom: 1.4rem;
-        }
-        .label--light  { background: rgba(255,255,255,0.12); color: var(--kiwi); }
-        .label--kiwi   { background: rgba(153,193,34,0.18); color: var(--kiwi); }
+            font-size:.8rem;
+            font-weight:800;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+            padding:.6rem 1.15rem;
+            background:var(--kiwi);
+            color:var(--white);
+            margin-bottom:1.2rem;border-radius:5px;}
+        .label--light  { background:var(--kiwi); color:var(--white); }
+        .label--kiwi   { background:var(--kiwi); color:var(--white); }
 
         h2.display {
             font-family:'Bebas Neue',sans-serif;
@@ -124,15 +124,15 @@
             display: inline-flex;
             align-items: center;
             gap: 0.7rem;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
+            font-size:.72rem;
+            font-weight:800;
+            letter-spacing:.09em;
             text-transform: uppercase;
-            padding: 1rem 2.2rem;
+            padding:1rem 1.7rem;
             transition: background 0.28s, color 0.28s, transform 0.28s;
             cursor: pointer;
             border: none;
-            border-radius: var(--radius-sm);
+            border-radius:5px;
         }
         .btn svg { flex-shrink: 0; transition: transform 0.28s; }
         .btn:hover svg { transform: translateX(4px); }
@@ -303,9 +303,9 @@
         }
 
         .hero__eyebrow {
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.32em;
+            font-size:.8rem;
+            font-weight:700;
+            letter-spacing:.14em;
             text-transform: uppercase;
             color: var(--kiwi);
             margin-bottom: 1.4rem;
@@ -468,9 +468,9 @@
             display: block;
             line-height: 1.1;letter-spacing:.5px;}
         .promesse__badge span {
-            font-size: 0.6rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
+            font-size:.72rem;
+            font-weight:800;
+            letter-spacing:.08em;
             text-transform: uppercase;
             display: block;
             margin-top: 0.3rem;
@@ -533,9 +533,9 @@
         .blog-card__body { padding: 1.8rem; }
 
         .blog-card__tag {
-            font-size: 0.6rem;
-            font-weight: 700;
-            letter-spacing: 0.22em;
+            font-size:.72rem;
+            font-weight:800;
+            letter-spacing:.08em;
             text-transform: uppercase;
             color: var(--kiwi);
             margin-bottom: 0.9rem;
@@ -557,9 +557,9 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            font-size: 0.67rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
+            font-size:.72rem;
+            font-weight:800;
+            letter-spacing:.08em;
             text-transform: uppercase;
             color: var(--kiwi);
             transition: gap 0.3s;
@@ -623,9 +623,9 @@
         }
 
         .pcell__tag {
-            font-size: 0.58rem;
-            font-weight: 700;
-            letter-spacing: 0.22em;
+            font-size:.72rem;
+            font-weight:800;
+            letter-spacing:.08em;
             text-transform: uppercase;
             color: var(--kiwi);
             margin-bottom: 0.4rem;
@@ -695,9 +695,9 @@
             line-height: 1.1;
             margin-bottom: 0.3rem;letter-spacing:.5px;}
         .prod-badge__role {
-            font-size: 0.58rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
+            font-size:.72rem;
+            font-weight:800;
+            letter-spacing:.08em;
             text-transform: uppercase;
             color: var(--kiwi);
         }
@@ -708,8 +708,8 @@
         .producteurs__text h2 { margin-bottom: 0.6rem; }
         .farmer-name {
             font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.16em;
+            font-weight:800;
+            letter-spacing:.08em;
             text-transform: uppercase;
             color: var(--green);
             margin-bottom: 2rem;
@@ -859,14 +859,13 @@
             color: var(--white);
             line-height: 1;letter-spacing:.5px;}
         .footer__brand-sub {
-            font-size: 0.55rem;
-            letter-spacing: 0.24em;
+            font-size:.72rem;
+            letter-spacing:.08em;
             text-transform: uppercase;
             color: var(--kiwi);
             display: block;
             margin-top: 0.3rem;
-            margin-bottom: 1.5rem;
-        }
+            margin-bottom: 1.5rem;font-weight:800;}
         .footer__brand p {
             font-size: 0.88rem;
             line-height: 1.8;
@@ -890,9 +889,9 @@
         .social:hover { background: var(--kiwi); color: var(--brown); border-color: var(--kiwi); }
 
         .footer__col h4 {
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.22em;
+            font-size:.72rem;
+            font-weight:800;
+            letter-spacing:.08em;
             text-transform: uppercase;
             color: var(--white);
             margin-bottom: 1.4rem;
@@ -1156,7 +1155,7 @@
 
 <!-- MOBILE DRAWER -->
 <div class="drawer" id="drawer">
-    <button class="drawer__close" id="drawerClose">✕</button>
+    <button class="drawer__close" id="drawerClose" aria-label="Fermer le menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <ul class="drawer__menu">
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="produits.html">Nos Produits Régionaux</a></li>

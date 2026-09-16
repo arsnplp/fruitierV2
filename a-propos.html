@@ -28,6 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
+        button{font-family:inherit;}
         :root {
             --olive:      #8B8F47;
             --green:      #616D29;
@@ -51,13 +52,12 @@
         /* ─── LABEL ─────────────────────────────────── */
         .label {
             display: inline-block;
-            font-size: 0.65rem; font-weight: 700;
-            letter-spacing: 0.28em; text-transform: uppercase;
-            padding: 0.45rem 1rem;
-            background: var(--sage); color: var(--green);
-            margin-bottom: 1.4rem;
-        }
-        .label--kiwi { background: rgba(153,193,34,0.15); color: var(--green); }
+            font-size:.8rem; font-weight:800;
+            letter-spacing:.08em; text-transform:uppercase;
+            padding:.6rem 1.15rem;
+            background:var(--kiwi); color:var(--white);
+            margin-bottom:1.2rem;border-radius:5px;}
+        .label--kiwi { background:var(--kiwi); color:var(--white); }
 
         h2.display {
             font-family:'Bebas Neue',sans-serif;
@@ -68,10 +68,10 @@
         /* ─── BOUTONS ───────────────────────────────── */
         .btn {
             display: inline-flex; align-items: center; gap: 0.7rem;
-            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
-            text-transform: uppercase; padding: 1rem 2.2rem;
+            font-size:.72rem; font-weight:800; letter-spacing:.09em;
+            text-transform: uppercase; padding:1rem 1.7rem;
             transition: background 0.28s, color 0.28s; cursor: pointer; border: none;
-            border-radius: var(--radius-sm);
+            border-radius:5px;
         }
         .btn svg { flex-shrink: 0; transition: transform 0.28s; }
         .btn:hover svg { transform: translateX(4px); }
@@ -125,7 +125,7 @@
                 url('image/comptoir-epicerie-fine-la-destrousse.jpeg') center/cover no-repeat;
             padding:8.5rem 5rem 4.5rem;
         }
-        .p-hero__eyebrow{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:inline-block;}
+        .p-hero__eyebrow{font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:inline-block;}
         .p-hero h1{font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:1px;font-size:clamp(2.8rem,6vw,5rem);line-height:1.02;color:var(--white);margin-bottom:.4rem;text-shadow:0 4px 26px rgba(0,0,0,.4);}
         .p-hero__script{font-family:'Caveat',cursive;font-weight:600;font-size:clamp(1.7rem,2.8vw,2.3rem);color:var(--kiwi);margin-bottom:1.3rem;line-height:1;}
         .p-hero .lead{font-family:'Montserrat',sans-serif;max-width:580px;color:rgba(255,255,255,.85);}
@@ -149,7 +149,7 @@
             background: var(--white);
         }
         .comptoir__img img { width:100%; border-radius:28px; box-shadow:0 24px 60px rgba(95,56,23,0.14); }
-        .comptoir__text .label { background:rgba(153,193,34,0.15); color:var(--green); }
+        .comptoir__text .label { background:var(--kiwi); color:var(--white); }
         .comptoir__text h2:first-of-type {
             font-family:'Bebas Neue',sans-serif;
             font-size:clamp(1.8rem,2.6vw,2.8rem); font-weight:400;
@@ -206,8 +206,8 @@
             z-index: 2;
         }
         .apc__slide-tag {
-            font-size:0.62rem; font-weight:700;
-            letter-spacing:0.26em; text-transform:uppercase;
+            font-size:.72rem; font-weight:800;
+            letter-spacing:.08em; text-transform:uppercase;
             color:var(--kiwi); margin-bottom:1rem;
         }
         .apc__slide-title {
@@ -263,10 +263,10 @@
         .producteurs__visual:hover img { transform:scale(1.04); }
         .prod-badge { position:absolute; bottom:2.5rem; right:-1px; background:var(--brown); color:var(--white); padding:1.4rem 1.8rem; max-width:230px; }
         .prod-badge__name { font-family:'Bebas Neue',sans-serif; font-size:1.35rem; font-weight:400; line-height:1.1; margin-bottom:0.3rem;letter-spacing:.5px;}
-        .prod-badge__role { font-size:0.58rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--kiwi); }
+        .prod-badge__role { font-size:.72rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--kiwi); }
         .producteurs__text { padding:5rem 5rem 5rem 6rem; }
         .producteurs__text h2 { margin-bottom:0.6rem; }
-        .farmer-name { font-size:0.72rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--green); margin-bottom:2rem; }
+        .farmer-name { font-size:0.72rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--green); margin-bottom:2rem; }
         .producteurs__text p { margin-bottom:1.3rem; }
         .values { list-style:none; margin:2rem 0 2.8rem; display:flex; flex-direction:column; gap:0.85rem; }
         .values li { display:flex; align-items:center; gap:0.9rem; font-size:0.92rem; font-weight:600; color:var(--brown); }
@@ -321,12 +321,12 @@
         .footer { background:var(--brown); padding:6rem 7rem 3rem; }
         .footer__top { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:4rem; padding-bottom:4rem; margin-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.08); }
         .footer__brand-name { font-family:'Bebas Neue',sans-serif; font-size:2rem; font-weight:400; color:var(--white); line-height:1;letter-spacing:.5px;}
-        .footer__brand-sub { font-size:0.55rem; letter-spacing:0.24em; text-transform:uppercase; color:var(--kiwi); display:block; margin-top:0.3rem; margin-bottom:1.5rem; }
+        .footer__brand-sub { font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--kiwi); display:block; margin-top:0.3rem; margin-bottom:1.5rem;font-weight:800;}
         .footer__brand p { font-size:0.88rem; line-height:1.8; color:rgba(255,255,255,0.48); margin-bottom:2rem; }
         .footer__socials { display:flex; gap:0.7rem; }
         .social { width:38px; height:38px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.55); display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; transition:background 0.3s,color 0.3s,border-color 0.3s; }
         .social:hover { background:var(--kiwi); color:var(--brown); border-color:var(--kiwi); }
-        .footer__col h4 { font-size:0.65rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--white); margin-bottom:1.4rem; }
+        .footer__col h4 { font-size:.72rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--white); margin-bottom:1.4rem; }
         .footer__col ul { list-style:none; }
         .footer__col ul li { margin-bottom:0.75rem; }
         .footer__col ul li a { font-size:0.88rem; color:rgba(255,255,255,0.46); transition:color 0.3s; }
@@ -417,7 +417,7 @@
 
 <!-- DRAWER MOBILE -->
 <div class="drawer" id="drawer">
-    <button class="drawer__close" id="drawerClose">✕</button>
+    <button class="drawer__close" id="drawerClose" aria-label="Fermer le menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <ul class="drawer__menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="produits.html">Nos Produits Régionaux</a></li>

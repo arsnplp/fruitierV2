@@ -28,6 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
     <style>
+        button{font-family:inherit;}
         :root {
             --olive:#8B8F47; --green:#616D29; --kiwi:#99C122; --sage:#D2D4C1;
             --cream:#F5F5EF; --brown:#5F3817; --brown-mid:#7a4920;
@@ -42,11 +43,11 @@
         a{text-decoration:none;color:inherit;}
         ul{list-style:none;}
 
-        .label{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding:.45rem 1rem;background:var(--sage);color:var(--green);margin-bottom:1.4rem;}
+        .label{display:inline-block;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.6rem 1.15rem;background:var(--kiwi);color:var(--white);margin-bottom:1.2rem;border-radius:5px;}
         h2.display{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.5vw,3.4rem);font-weight:400;line-height:1.1;color:var(--brown);margin-bottom:1.5rem;letter-spacing:.5px;}
         .lead{font-size:1rem;line-height:1.88;color:var(--text-muted);margin-bottom:1rem;}
 
-        .btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;transition:background .28s,color .28s;cursor:pointer;border:none;margin-top:1rem;border-radius:var(--radius-sm);}
+        .btn{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:1rem 1.7rem;transition:background .28s,color .28s;cursor:pointer;border:none;margin-top:1rem;border-radius:5px;}
         .btn svg{flex-shrink:0;transition:transform .28s;}
         .btn:hover svg{transform:translateX(4px);}
         .arr{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
@@ -87,7 +88,7 @@
             color:var(--white);padding:8.5rem 5rem 4rem;
         }
         .p-hero2__inner{display:grid;grid-template-columns:1fr 1.05fr;gap:2rem;align-items:center;max-width:1400px;margin:0 auto;width:100%;}
-        .p-hero2__eyebrow{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.3rem;display:inline-block;}
+        .p-hero2__eyebrow{font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.3rem;display:inline-block;}
         .p-hero2__title{font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:1px;font-size:clamp(2.6rem,5.2vw,4.4rem);line-height:1.03;color:var(--white);margin-bottom:.5rem;}
         .p-hero2__script{font-family:'Caveat',cursive;font-weight:600;font-size:clamp(1.7rem,2.8vw,2.3rem);color:var(--kiwi);margin-bottom:1.4rem;line-height:1;}
         .p-hero2__lead{font-family:'Montserrat',sans-serif;font-size:.92rem;line-height:1.75;color:rgba(255,255,255,.82);max-width:460px;margin-bottom:1.8rem;}
@@ -145,7 +146,7 @@
 
         .coffret-card__footer{display:flex;align-items:center;justify-content:space-between;padding-top:1.2rem;border-top:1px solid var(--sage);margin-top:auto;}
         .coffret-card__price{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;font-weight:400;color:var(--brown);letter-spacing:.5px;}
-        .coffret-card__btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.7rem 1.3rem;background:var(--brown);color:var(--white);border-radius:var(--radius-sm);transition:background .25s;}
+        .coffret-card__btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.7rem 1.3rem;background:var(--brown);color:var(--white);border-radius:var(--radius-sm);transition:background .25s;}
         .coffret-card__btn:hover{background:var(--green);}
         .coffret-card__btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;transition:transform .25s;}
         .coffret-card__btn:hover svg{transform:translateX(3px);}
@@ -159,12 +160,12 @@
         .footer{background:var(--brown);color:rgba(255,255,255,.75);font-size:.9rem;line-height:1.7;}
         .footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:3rem;padding:5rem;}
         .footer__brand-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;font-weight:400;color:var(--white);margin-bottom:.3rem;letter-spacing:.5px;}
-        .footer__brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:block;}
+        .footer__brand-sub{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--kiwi);margin-bottom:1.2rem;display:block;}
         .footer__brand p{color:rgba(255,255,255,.6);max-width:280px;line-height:1.7;margin-bottom:1.5rem;}
         .footer__socials{display:flex;gap:.8rem;}
         .social{width:36px;height:36px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.7);transition:background .25s,color .25s,border-color .25s;}
         .social:hover{background:var(--kiwi);color:var(--brown);border-color:var(--kiwi);}
-        .footer__col h4{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--white);margin-bottom:1.4rem;}
+        .footer__col h4{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:1.4rem;}
         .footer__col ul li{margin-bottom:.6rem;}
         .footer__col ul a{color:rgba(255,255,255,.6);transition:color .25s;}
         .footer__col ul a:hover{color:var(--kiwi);}
@@ -235,7 +236,7 @@
 
 <!-- DRAWER MOBILE -->
 <div class="drawer" id="drawer">
-    <button class="drawer__close" id="drawerClose">✕</button>
+    <button class="drawer__close" id="drawerClose" aria-label="Fermer le menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <ul class="drawer__menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="produits.html">Nos Produits Régionaux</a></li>
