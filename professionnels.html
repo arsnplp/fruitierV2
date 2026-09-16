@@ -147,6 +147,12 @@
         .p2-feature .ico svg{width:24px;height:24px;fill:none;stroke:var(--kiwi);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
         .p2-feature strong{display:block;font-size:.82rem;font-weight:800;color:var(--white);}
         .p2-feature span{display:block;font-size:.76rem;color:rgba(255,255,255,.65);line-height:1.3;}
+        /* défilement automatique de la bande quand elle ne tient pas à l'écran (mobile) */
+        .p2-features{overflow:hidden;}
+        .p2-features.is-marquee .p2-features__card{overflow:visible;width:max-content;animation:p2-marquee var(--marquee-dur,30s) linear infinite;}
+        .p2-features.is-marquee .p2-feature{flex:0 0 auto;}
+        .p2-features.is-marquee .p2-feature:last-child{border-right:1px solid rgba(255,255,255,.14);}
+        @keyframes p2-marquee{to{transform:translateX(-50%);}}
 
         /* ============ OFFER CARDS ============ */
         .p2-offers{background:var(--white);padding:6.5rem 3.5rem 5.5rem;}
@@ -282,6 +288,26 @@
         </div>
     </div>
 </section>
+<script>
+(function(){
+    var strip=document.querySelector('.p2-features'); if(!strip) return;
+    var card=strip.querySelector('.p2-features__card');
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+    function setup(){
+        card.querySelectorAll('[data-clone]').forEach(function(n){n.remove();});
+        strip.classList.remove('is-marquee');
+        if(reduce.matches || card.scrollWidth<=card.clientWidth+1) return;
+        Array.prototype.slice.call(card.children).forEach(function(n){
+            var c=n.cloneNode(true); c.setAttribute('data-clone','');c.setAttribute('aria-hidden','true'); card.appendChild(c);
+        });
+        strip.classList.add('is-marquee');
+        strip.style.setProperty('--marquee-dur',(card.scrollWidth/2/40)+'s');
+    }
+    var w=window.innerWidth, t;
+    window.addEventListener('resize',function(){ if(window.innerWidth===w) return; w=window.innerWidth; clearTimeout(t); t=setTimeout(setup,150); });
+    if(document.fonts&&document.fonts.ready){document.fonts.ready.then(setup);}else{setup();}
+})();
+</script>
 
 <!-- 3 OFFRES -->
 <section class="p2-offers">
