@@ -30,7 +30,7 @@
     <style>
         button{font-family:inherit;}
         :root {
-            --olive:#8B8F47; --green:#616D29; --kiwi:#99C122; --sage:#D2D4C1;
+            --olive:#8B8F47; --green:#616D29; --kiwi:#8FB93E; --sage:#D2D4C1;
             --cream:#F5F5EF; --brown:#5F3817; --brown-mid:#7a4920;
             --white:#ffffff; --text-muted:rgba(95,56,23,0.6);
             --ease-out:cubic-bezier(0.22,1,0.36,1);
@@ -53,8 +53,8 @@
         .arr{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
         .btn--dark{background:var(--brown);color:var(--white);}
         .btn--dark:hover{background:var(--green);}
-        .btn--kiwi{background:var(--kiwi);color:var(--brown);}
-        .btn--kiwi:hover{background:var(--brown);color:var(--white);}
+        .btn--kiwi{background:var(--kiwi);color:var(--white);}
+        .btn--kiwi:hover{background:#71962E;color:var(--white);}
         .btn--ghost{background:transparent;border:1.5px solid var(--brown);color:var(--brown);}
         .btn--ghost:hover{background:var(--brown);color:var(--white);}
 
@@ -67,7 +67,7 @@
         .nav__menu a{font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--brown);transition:color .3s;position:relative;white-space:nowrap;}
         .nav__menu a:not(.nav__cta)::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--kiwi);transition:width .3s var(--ease-out);}
         .nav__menu a:not(.nav__cta):hover::after,.nav__menu a.active::after{width:100%;}
-        .nav__cta{background:var(--kiwi)!important;color:var(--brown)!important;padding:.55rem 1.3rem;border-radius:var(--radius-sm);}
+        .nav__cta{background:var(--kiwi)!important;color:#ffffff!important;padding:.55rem 1.3rem;border-radius:var(--radius-sm);}
         .nav__cta:hover{background:var(--brown)!important;color:var(--white)!important;}
         .nav__menu a.nav__region{color:var(--brown)!important;}
         .nav__burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}

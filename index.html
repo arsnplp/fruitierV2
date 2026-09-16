@@ -63,7 +63,7 @@
         :root {
             --olive:      #8B8F47;
             --green:      #616D29;
-            --kiwi:       #99C122;
+            --kiwi:       #8FB93E;
             --sage:       #D2D4C1;
             --cream:      #F5F5EF;
             --brown:      #5F3817;
@@ -140,8 +140,8 @@
         .btn--dark  { background: var(--brown); color: var(--white); }
         .btn--dark:hover  { background: var(--green); }
 
-        .btn--kiwi  { background: var(--kiwi); color: var(--brown); }
-        .btn--kiwi:hover  { background: var(--white); }
+        .btn--kiwi{background:var(--kiwi);color:var(--white);}
+        .btn--kiwi:hover{background:#71962E;color:var(--white);}
 
         .btn--ghost {
             background: transparent;
@@ -223,7 +223,7 @@
 
         .nav__cta {
             background: var(--kiwi) !important;
-            color: var(--brown) !important;
+            color: #ffffff !important;
             padding: 0.55rem 1.3rem;
             border-radius: var(--radius-sm);
         }
@@ -801,7 +801,7 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse at 75% 50%, rgba(153,193,34,0.18) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 50%, rgba(143,185,62,0.18) 0%, transparent 55%),
                 radial-gradient(ellipse at 15% 80%, rgba(95,56,23,0.25) 0%, transparent 50%);
             pointer-events: none;
         }
@@ -812,7 +812,7 @@
             transform: translateY(-50%);
             width: 380px; height: 380px;
             border-radius: 50%;
-            border: 1px solid rgba(153,193,34,0.22);
+            border: 1px solid rgba(143,185,62,0.22);
             pointer-events: none;
         }
         .paniers__rings::before {
@@ -820,14 +820,14 @@
             position: absolute;
             inset: 36px;
             border-radius: 50%;
-            border: 1px solid rgba(153,193,34,0.14);
+            border: 1px solid rgba(143,185,62,0.14);
         }
         .paniers__rings::after {
             content: '';
             position: absolute;
             inset: 72px;
             border-radius: 50%;
-            border: 1px solid rgba(153,193,34,0.08);
+            border: 1px solid rgba(143,185,62,0.08);
         }
         .paniers__content {
             position: relative;
@@ -1028,7 +1028,7 @@
             background: linear-gradient(135deg,
                 rgba(245,245,239,0.91) 0%,
                 rgba(245,245,239,0.76) 60%,
-                rgba(153,193,34,0.18) 100%
+                rgba(143,185,62,0.18) 100%
             );
         }
         .local-cta__col--sage::before {
