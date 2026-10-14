@@ -54,9 +54,7 @@
     }
     </script>
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
     <style>
         button{font-family:inherit;}
         :root {
@@ -264,6 +262,37 @@
             .nav{padding:0 1.5rem;}
         }
     </style>
+    <style id="conformite">
+        /* ===== Conformite : contrastes WCAG 2.1 AA + pied de page legal ===== */
+        /* texte brun fonce sur fond kiwi (le blanc sur #8FB93E n'atteint que 2.3:1) */
+        .label,.label--kiwi,.label--light,.btn--kiwi,.p2-btn2--kiwi,.p2-btn--kiwi2,.p2-label,.p2-nav-v2__cta,
+        .cat-tabs button,.sub-tabs button.is-active{color:#5c3616;}
+        .nav__cta,.nav__cta:hover{color:#5c3616!important;}
+        .p2-btn--gold{background:#8C7048;}
+        .p2-btn--gold:hover{background:#6f5838;}
+        .blog-card__tag,.blog-link{color:#5f7f27;}
+        .blog-card__excerpt{color:rgba(28,43,26,.78);}
+        /* pied de page (fond brun) */
+        .footer__col a,.footer__col ul a,.footer__col ul li a,.footer__brand p,.footer__hours,.footer__address,
+        .footer__bottom p,.footer__bottom-links a,.footer .social{color:rgba(255,255,255,.75);}
+        .footer__hours strong,.footer__brand-sub{color:#9cc54b;}
+        .footer__col h4{color:#fff;}
+        .footer__bottom-links{flex-wrap:wrap;}
+        .footer__evin{max-width:1360px;margin:1rem auto 0;font-size:.78rem;color:rgba(255,255,255,.75);text-align:center;}
+        .p2-footer__legal{max-width:1360px;margin:1.2rem auto 0;padding-top:1rem;border-top:1px solid rgba(0,0,0,.08);display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;justify-content:space-between;font-size:.78rem;color:var(--text-muted);}
+        .p2-footer__legal nav{display:flex;flex-wrap:wrap;gap:1.2rem;}
+        .p2-footer__legal a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
+        :root{--text-muted:rgba(95,56,23,.8);}
+        .info-block h3{color:#e1edc9;}
+        .contact-info__title span{color:#abcd69;}
+        .hours-row .time{color:rgba(255,255,255,.88);}
+        .contact-info__maplink{color:#e8eae0;}
+        .form-field label .opt{font-weight:400;text-transform:none;letter-spacing:0;}
+        .form-notice a{text-decoration:underline;}
+        .map-consent{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:1.5rem;text-align:center;background:rgba(0,0,0,.18);border:1px dashed rgba(255,255,255,.4);border-radius:var(--radius);color:#fff;font-size:.85rem;line-height:1.6;}
+        .map-consent__btn{background:var(--kiwi);color:#5c3616;font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.8rem 1.2rem;border:none;border-radius:5px;cursor:pointer;}
+        .map-consent__btn:hover{background:#fff;}
+    </style>
 </head>
 <body>
 
@@ -353,13 +382,12 @@
 
         <div class="info-block">
             <h3>Nous situer</h3>
-            <div class="contact-info__map">
-                <iframe
-                    src="https://maps.google.com/maps?q=La+Destrousse+13112+France&output=embed&z=14"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Le Fruitier sur la carte">
-                </iframe>
+            <div class="contact-info__map" id="mapBox"
+                 data-src="https://maps.google.com/maps?q=La+Destrousse+13112+France&amp;output=embed&amp;z=14">
+                <div class="map-consent">
+                    <p>La carte est fournie par Google Maps, qui dépose des cookies dès son affichage.</p>
+                    <button type="button" class="map-consent__btn" id="mapLoad">Afficher la carte (Google Maps dépose des cookies)</button>
+                </div>
             </div>
             <a href="https://maps.google.com/?q=La+Destrousse+13112+France" target="_blank" rel="noopener" class="contact-info__maplink">
                 Ouvrir dans Google Maps
@@ -377,22 +405,22 @@
             <div class="form-grid">
                 <div class="form-field">
                     <label for="prenom">Prénom</label>
-                    <input type="text" id="prenom" name="prenom" placeholder="Marie" required>
+                    <input type="text" id="prenom" name="prenom" placeholder="Marie" required autocomplete="given-name">
                 </div>
                 <div class="form-field">
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="Dupont" required>
+                    <label for="nom">Nom <span class="opt">(facultatif)</span></label>
+                    <input type="text" id="nom" name="nom" placeholder="Dupont" autocomplete="family-name">
                 </div>
                 <div class="form-field">
                     <label for="email">Adresse e-mail</label>
-                    <input type="email" id="email" name="email" placeholder="marie@exemple.fr" required>
+                    <input type="email" id="email" name="email" placeholder="marie@exemple.fr" required autocomplete="email">
                 </div>
                 <div class="form-field">
-                    <label for="telephone">Téléphone</label>
-                    <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX">
+                    <label for="telephone">Téléphone <span class="opt">(facultatif)</span></label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" autocomplete="tel">
                 </div>
                 <div class="form-field form-field--full">
-                    <label for="sujet">Sujet</label>
+                    <label for="sujet">Sujet <span class="opt">(facultatif)</span></label>
                     <select id="sujet" name="sujet">
                         <option value="">Choisissez un sujet</option>
                         <option>Commande de panier</option>
@@ -413,7 +441,13 @@
                     <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
             </div>
-            <p class="form-notice">Vos données ne sont utilisées que pour répondre à votre demande.</p>
+            <p class="form-notice">
+                Les informations saisies sont utilisées par Le Fruitier uniquement pour répondre à votre
+                demande (et, le cas échéant, préparer votre commande). Elles ne sont transmises à aucun tiers
+                et sont conservées au maximum 3 ans après notre dernier échange. Vous pouvez y accéder,
+                les rectifier ou les faire supprimer en nous écrivant.
+                <a href="confidentialite.html">Politique de confidentialité</a>.
+            </p>
         </form>
     </div>
 
@@ -471,10 +505,13 @@
     <div class="footer__bottom">
         <p>© 2025 Le Fruitier · La Destrousse · Tous droits réservés</p>
         <div class="footer__bottom-links">
-            <a href="#">Mentions légales</a>
-            <a href="#">Confidentialité</a>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="confidentialite.html">Confidentialité</a>
+            <a href="cgu.html">CGU</a>
+            <a href="cgv.html">CGV</a>
         </div>
     </div>
+    <p class="footer__evin">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
 </footer>
 
 <script>
@@ -484,6 +521,18 @@
     burger.addEventListener('click', () => drawer.classList.add('is-open'));
     drawerClose.addEventListener('click', () => drawer.classList.remove('is-open'));
     drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('is-open')));
+
+    // Carte Google Maps chargee uniquement au clic (aucun cookie tiers avant action du visiteur)
+    const mapBtn = document.getElementById('mapLoad');
+    if (mapBtn) mapBtn.addEventListener('click', () => {
+        const box = document.getElementById('mapBox');
+        const frame = document.createElement('iframe');
+        frame.src = box.dataset.src;
+        frame.title = 'Le Fruitier sur la carte';
+        frame.loading = 'lazy';
+        frame.referrerPolicy = 'no-referrer-when-downgrade';
+        box.replaceChildren(frame);
+    });
 </script>
 </body>
 </html>

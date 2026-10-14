@@ -24,9 +24,7 @@
     <meta name="twitter:description" content="L'histoire du Fruitier à La Destrousse : plus de 20 ans au service du goût, des producteurs locaux et des saveurs de Provence. Où nous trouver et parking.">
     <meta name="twitter:image" content="image/comptoir-produits-regionaux-provence.jpg">
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
     <style>
         button{font-family:inherit;}
         :root {
@@ -391,6 +389,28 @@
             .footer__bottom { flex-direction:column; gap:1rem; text-align:center; }
         }
     </style>
+    <style id="conformite">
+        /* ===== Conformite : contrastes WCAG 2.1 AA + pied de page legal ===== */
+        /* texte brun fonce sur fond kiwi (le blanc sur #8FB93E n'atteint que 2.3:1) */
+        .label,.label--kiwi,.label--light,.btn--kiwi,.p2-btn2--kiwi,.p2-btn--kiwi2,.p2-label,.p2-nav-v2__cta,
+        .cat-tabs button,.sub-tabs button.is-active{color:#5c3616;}
+        .nav__cta,.nav__cta:hover{color:#5c3616!important;}
+        .p2-btn--gold{background:#8C7048;}
+        .p2-btn--gold:hover{background:#6f5838;}
+        .blog-card__tag,.blog-link{color:#5f7f27;}
+        .blog-card__excerpt{color:rgba(28,43,26,.78);}
+        /* pied de page (fond brun) */
+        .footer__col a,.footer__col ul a,.footer__col ul li a,.footer__brand p,.footer__hours,.footer__address,
+        .footer__bottom p,.footer__bottom-links a,.footer .social{color:rgba(255,255,255,.75);}
+        .footer__hours strong,.footer__brand-sub{color:#9cc54b;}
+        .footer__col h4{color:#fff;}
+        .footer__bottom-links{flex-wrap:wrap;}
+        .footer__evin{max-width:1360px;margin:1rem auto 0;font-size:.78rem;color:rgba(255,255,255,.75);text-align:center;}
+        .p2-footer__legal{max-width:1360px;margin:1.2rem auto 0;padding-top:1rem;border-top:1px solid rgba(0,0,0,.08);display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;justify-content:space-between;font-size:.78rem;color:var(--text-muted);}
+        .p2-footer__legal nav{display:flex;flex-wrap:wrap;gap:1.2rem;}
+        .p2-footer__legal a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
+        :root{--text-muted:rgba(95,56,23,.8);}
+    </style>
 </head>
 <body>
 
@@ -549,9 +569,9 @@
     </button>
 
     <div class="apc__dots">
-        <button class="apc__dot is-active" data-slide="0"></button>
-        <button class="apc__dot" data-slide="1"></button>
-        <button class="apc__dot" data-slide="2"></button>
+        <button class="apc__dot is-active" data-slide="0" aria-label="Photo 1" type="button"></button>
+        <button class="apc__dot" data-slide="1" aria-label="Photo 2" type="button"></button>
+        <button class="apc__dot" data-slide="2" aria-label="Photo 3" type="button"></button>
     </div>
 </section>
 
@@ -612,10 +632,13 @@
     <div class="footer__bottom">
         <p>© 2025 Le Fruitier · La Destrousse · Tous droits réservés</p>
         <div class="footer__bottom-links">
-            <a href="#">Mentions légales</a>
-            <a href="#">Confidentialité</a>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="confidentialite.html">Confidentialité</a>
+            <a href="cgu.html">CGU</a>
+            <a href="cgv.html">CGV</a>
         </div>
     </div>
+    <p class="footer__evin">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
 </footer>
 
 
