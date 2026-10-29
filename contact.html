@@ -289,6 +289,12 @@
         .contact-info__maplink{color:#e8eae0;}
         .form-field label .opt{font-weight:400;text-transform:none;letter-spacing:0;}
         .form-notice a{text-decoration:underline;}
+        .cookie-bar{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:1100;max-width:640px;margin:0 auto;display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--brown);color:#fff;border-radius:var(--radius);box-shadow:0 14px 40px rgba(0,0,0,.3);font-size:.82rem;line-height:1.55;}
+        .cookie-bar a{color:var(--kiwi);text-decoration:underline;}
+        .cookie-bar__btn{flex-shrink:0;background:var(--kiwi);color:#5c3616;font-weight:800;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:.7rem 1.1rem;border:none;border-radius:5px;cursor:pointer;}
+        .cookie-bar__btn:hover{background:#fff;}
+        .cookie-bar[hidden]{display:none;}
+        @media (max-width:600px){.cookie-bar{flex-direction:column;align-items:stretch;text-align:center;}}
         .map-consent{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:1.5rem;text-align:center;background:rgba(0,0,0,.18);border:1px dashed rgba(255,255,255,.4);border-radius:var(--radius);color:#fff;font-size:.85rem;line-height:1.6;}
         .map-consent__btn{background:var(--kiwi);color:#5c3616;font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.8rem 1.2rem;border:none;border-radius:5px;cursor:pointer;}
         .map-consent__btn:hover{background:#fff;}
@@ -384,10 +390,7 @@
             <h3>Nous situer</h3>
             <div class="contact-info__map" id="mapBox"
                  data-src="https://maps.google.com/maps?q=La+Destrousse+13112+France&amp;output=embed&amp;z=14">
-                <div class="map-consent">
-                    <p>La carte est fournie par Google Maps, qui dépose des cookies dès son affichage.</p>
-                    <button type="button" class="map-consent__btn" id="mapLoad">Afficher la carte (Google Maps dépose des cookies)</button>
-                </div>
+                <iframe src="https://maps.google.com/maps?q=La+Destrousse+13112+France&amp;output=embed&amp;z=14" title="Le Fruitier sur la carte" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <a href="https://maps.google.com/?q=La+Destrousse+13112+France" target="_blank" rel="noopener" class="contact-info__maplink">
                 Ouvrir dans Google Maps
@@ -514,6 +517,10 @@
     <p class="footer__evin">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
 </footer>
 
+<div class="cookie-bar" id="cookieBar" hidden role="region" aria-label="Information cookies">
+    <p>Cette page affiche une carte Google Maps, qui dépose des cookies de Google. En savoir plus dans notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+    <button type="button" class="cookie-bar__btn" id="cookieOk">J'ai compris</button>
+</div>
 <script>
     const burger = document.getElementById('burgerBtn');
     const drawer = document.getElementById('drawer');
@@ -522,16 +529,14 @@
     drawerClose.addEventListener('click', () => drawer.classList.remove('is-open'));
     drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('is-open')));
 
-    // Carte Google Maps chargee uniquement au clic (aucun cookie tiers avant action du visiteur)
-    const mapBtn = document.getElementById('mapLoad');
-    if (mapBtn) mapBtn.addEventListener('click', () => {
-        const box = document.getElementById('mapBox');
-        const frame = document.createElement('iframe');
-        frame.src = box.dataset.src;
-        frame.title = 'Le Fruitier sur la carte';
-        frame.loading = 'lazy';
-        frame.referrerPolicy = 'no-referrer-when-downgrade';
-        box.replaceChildren(frame);
+    // Bandeau cookies (carte Google Maps)
+    const cookieBar = document.getElementById('cookieBar');
+    let cookieOk = false;
+    try { cookieOk = localStorage.getItem('lf-cookies-maps') === '1'; } catch (e) {}
+    if (cookieBar && !cookieOk) cookieBar.hidden = false;
+    document.getElementById('cookieOk').addEventListener('click', () => {
+        cookieBar.hidden = true;
+        try { localStorage.setItem('lf-cookies-maps', '1'); } catch (e) {}
     });
 </script>
 </body>
