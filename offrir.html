@@ -146,17 +146,17 @@
         /* LIGHTBOX PANIER */
         .pmodal{position:fixed;inset:0;z-index:1200;display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem;background:rgba(28,20,10,.72);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;}
         .pmodal.is-open{opacity:1;visibility:visible;}
-        .pmodal__box{position:relative;background:var(--white);border-radius:var(--radius);width:min(960px,100%);max-height:88vh;overflow-y:auto;display:grid;grid-template-columns:1.1fr .9fr;transform:translateY(18px) scale(.98);transition:transform .34s var(--ease-out);box-shadow:0 32px 80px rgba(0,0,0,.36);}
+        .pmodal__box{position:relative;background:var(--white);border-radius:var(--radius);width:min(960px,100%);max-height:88vh;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;transform:translateY(18px) scale(.98);transition:transform .34s var(--ease-out);box-shadow:0 32px 80px rgba(0,0,0,.36);}
         .pmodal.is-open .pmodal__box{transform:none;}
-        .pmodal__media{background:var(--sage);min-height:340px;display:flex;align-items:center;justify-content:center;}
-        .pmodal__media img{width:100%;height:100%;max-height:88vh;object-fit:cover;display:block;}
-        .pmodal__body{padding:3rem 2.8rem;display:flex;flex-direction:column;}
-        .pmodal__name{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:400;color:var(--brown);line-height:1.15;margin-bottom:1rem;letter-spacing:.5px;}
-        .pmodal__desc{font-size:.95rem;line-height:1.85;color:var(--text-muted);margin-bottom:1.4rem;}
-        .pmodal__list{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.8rem;}
-        .pmodal__list li{font-size:.84rem;line-height:1.6;color:var(--brown);display:flex;gap:.6rem;}
+        .pmodal__media{position:relative;background:var(--sage);min-height:340px;}
+        .pmodal__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+        .pmodal__body{padding:2.4rem 2.4rem 2.2rem;display:flex;flex-direction:column;max-height:88vh;overflow-y:auto;}
+        .pmodal__name{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.2vw,2rem);font-weight:400;color:var(--brown);line-height:1.1;margin-bottom:.7rem;letter-spacing:.5px;padding-right:2.5rem;}
+        .pmodal__desc{font-size:.84rem;line-height:1.65;color:var(--text-muted);margin-bottom:1rem;}
+        .pmodal__list{list-style:none;display:flex;flex-direction:column;gap:.15rem;margin-bottom:1.3rem;}
+        .pmodal__list li{font-size:.76rem;line-height:1.5;color:var(--brown);display:flex;gap:.5rem;}
         .pmodal__list li::before{content:'·';color:var(--kiwi);font-weight:700;flex-shrink:0;}
-        .pmodal__btn{align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:.9rem 1.5rem;background:var(--brown);color:var(--white);border-radius:var(--radius-sm);transition:background .25s;}
+        .pmodal__btn{align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;gap:.6rem;font-size:.68rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:.75rem 1.3rem;background:var(--brown);color:var(--white);border-radius:var(--radius-sm);transition:background .25s;}
         .pmodal__btn:hover{background:var(--green);}
         .pmodal__btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
         .pmodal__close{position:absolute;top:1rem;right:1rem;z-index:3;width:42px;height:42px;border-radius:50%;border:none;background:var(--brown);color:var(--white);font-size:1.35rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:background .25s,transform .25s;}
@@ -164,9 +164,9 @@
         @media (max-width:780px){
             .pmodal{padding:1rem;}
             .pmodal__box{grid-template-columns:1fr;max-height:92vh;}
-            .pmodal__media{min-height:0;}
-            .pmodal__media img{max-height:44vh;}
-            .pmodal__body{padding:2rem 1.6rem 2.4rem;}
+            .pmodal__box{overflow-y:auto;}
+            .pmodal__media{min-height:0;height:40vh;}
+            .pmodal__body{padding:1.6rem 1.4rem 2rem;max-height:none;overflow:visible;}
         }
 
         /* REVEAL */
