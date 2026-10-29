@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paniers garnis &amp; coffrets cadeaux gourmands – Le Fruitier</title>
+    <title>Paniers garnis &amp; cadeaux gourmands – Le Fruitier</title>
     <meta name="description" content="Paniers garnis et coffrets cadeaux composés de produits du terroir provençal. Cadeaux gourmands sur mesure à La Destrousse, Bouches-du-Rhône.">
     <link rel="canonical" href="offrir.html">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -14,13 +14,13 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Le Fruitier">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:title" content="Paniers garnis &amp; coffrets cadeaux gourmands – Le Fruitier">
+    <meta property="og:title" content="Paniers garnis &amp; cadeaux gourmands – Le Fruitier">
     <meta property="og:description" content="Paniers garnis et coffrets cadeaux composés de produits du terroir provençal. Cadeaux gourmands sur mesure à La Destrousse, Bouches-du-Rhône.">
     <meta property="og:image" content="image/pack/panier-garni-epicerie-fine-provence.jpg">
     <meta property="og:image:alt" content="Panier garni de produits provençaux à offrir">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Paniers garnis &amp; coffrets cadeaux gourmands – Le Fruitier">
+    <meta name="twitter:title" content="Paniers garnis &amp; cadeaux gourmands – Le Fruitier">
     <meta name="twitter:description" content="Paniers garnis et coffrets cadeaux composés de produits du terroir provençal. Cadeaux gourmands sur mesure à La Destrousse, Bouches-du-Rhône.">
     <meta name="twitter:image" content="image/pack/panier-garni-epicerie-fine-provence.jpg">
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
@@ -131,25 +131,43 @@
 
         .coffrets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}
 
-        .coffret-card{background:var(--cream);display:flex;flex-direction:column;border-radius:var(--radius);overflow:hidden;transition:transform .35s var(--ease-out),box-shadow .35s;}
-        .coffret-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(95,56,23,.12);}
-
-        .coffret-card__img{background:var(--white);padding:2rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-        .coffret-card__img img{width:100%;height:100%;object-fit:contain;transition:transform .5s var(--ease-out);}
+        .coffret-card{background:var(--cream);display:flex;flex-direction:column;border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:transform .35s var(--ease-out),box-shadow .35s;}
+        .coffret-card:hover,.coffret-card:focus-visible{transform:translateY(-6px);box-shadow:0 20px 50px rgba(95,56,23,.12);outline:none;}
+        .coffret-card__img{aspect-ratio:4/3;overflow:hidden;background:var(--sage);}
+        .coffret-card__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease-out);}
         .coffret-card:hover .coffret-card__img img{transform:scale(1.05);}
-
         .coffret-card__body{padding:1.8rem 2rem 2rem;display:flex;flex-direction:column;flex:1;}
-        .coffret-card__name{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;font-weight:400;color:var(--brown);line-height:1.2;margin-bottom:1rem;letter-spacing:.5px;}
-        .coffret-card__list{list-style:none;margin-bottom:1.5rem;display:flex;flex-direction:column;gap:.4rem;flex:1;}
-        .coffret-card__list li{font-size:.82rem;line-height:1.6;color:var(--text-muted);display:flex;gap:.6rem;}
-        .coffret-card__list li::before{content:'·';color:var(--kiwi);font-weight:700;flex-shrink:0;}
+        .coffret-card__tag{display:inline-block;align-self:flex-start;font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:rgba(143,185,62,.18);padding:.3rem .6rem;border-radius:4px;margin-bottom:.9rem;}
+        .coffret-card__name{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;font-weight:400;color:var(--brown);line-height:1.2;margin-bottom:.7rem;letter-spacing:.5px;}
+        .coffret-card__desc{font-size:.86rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;}
+        .coffret-card__more{margin-top:auto;padding-top:.9rem;border-top:1px solid var(--sage);font-size:.64rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--brown-mid);opacity:.7;transition:opacity .25s,color .25s;}
+        .coffret-card:hover .coffret-card__more{opacity:1;color:var(--green);}
 
-        .coffret-card__footer{display:flex;align-items:center;justify-content:space-between;padding-top:1.2rem;border-top:1px solid var(--sage);margin-top:auto;}
-        .coffret-card__price{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;font-weight:400;color:var(--brown);letter-spacing:.5px;}
-        .coffret-card__btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.7rem 1.3rem;background:var(--brown);color:var(--white);border-radius:var(--radius-sm);transition:background .25s;}
-        .coffret-card__btn:hover{background:var(--green);}
-        .coffret-card__btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;transition:transform .25s;}
-        .coffret-card__btn:hover svg{transform:translateX(3px);}
+        /* LIGHTBOX PANIER */
+        .pmodal{position:fixed;inset:0;z-index:1200;display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem;background:rgba(28,20,10,.72);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;}
+        .pmodal.is-open{opacity:1;visibility:visible;}
+        .pmodal__box{position:relative;background:var(--white);border-radius:var(--radius);width:min(960px,100%);max-height:88vh;overflow-y:auto;display:grid;grid-template-columns:1.1fr .9fr;transform:translateY(18px) scale(.98);transition:transform .34s var(--ease-out);box-shadow:0 32px 80px rgba(0,0,0,.36);}
+        .pmodal.is-open .pmodal__box{transform:none;}
+        .pmodal__media{background:var(--sage);min-height:340px;display:flex;align-items:center;justify-content:center;}
+        .pmodal__media img{width:100%;height:100%;max-height:88vh;object-fit:cover;display:block;}
+        .pmodal__body{padding:3rem 2.8rem;display:flex;flex-direction:column;}
+        .pmodal__name{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:400;color:var(--brown);line-height:1.15;margin-bottom:1rem;letter-spacing:.5px;}
+        .pmodal__desc{font-size:.95rem;line-height:1.85;color:var(--text-muted);margin-bottom:1.4rem;}
+        .pmodal__list{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.8rem;}
+        .pmodal__list li{font-size:.84rem;line-height:1.6;color:var(--brown);display:flex;gap:.6rem;}
+        .pmodal__list li::before{content:'·';color:var(--kiwi);font-weight:700;flex-shrink:0;}
+        .pmodal__btn{align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:.9rem 1.5rem;background:var(--brown);color:var(--white);border-radius:var(--radius-sm);transition:background .25s;}
+        .pmodal__btn:hover{background:var(--green);}
+        .pmodal__btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .pmodal__close{position:absolute;top:1rem;right:1rem;z-index:3;width:42px;height:42px;border-radius:50%;border:none;background:var(--brown);color:var(--white);font-size:1.35rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:background .25s,transform .25s;}
+        .pmodal__close:hover{background:var(--kiwi);transform:rotate(90deg);}
+        @media (max-width:780px){
+            .pmodal{padding:1rem;}
+            .pmodal__box{grid-template-columns:1fr;max-height:92vh;}
+            .pmodal__media{min-height:0;}
+            .pmodal__media img{max-height:44vh;}
+            .pmodal__body{padding:2rem 1.6rem 2.4rem;}
+        }
 
         /* REVEAL */
         .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out);}
@@ -311,137 +329,26 @@
 <section class="coffrets" id="coffrets">
     <div class="coffrets__head reveal">
         <span class="label">Nos Sélections</span>
-        <h2>NOS COFFRETS CADEAUX</h2>
-        <p>Des coffrets composés avec soin pour toutes les occasions : gourmandise, raffinement et Provence réunis.</p>
+        <h2>NOS PANIERS GARNIS</h2>
+        <p>Trois paniers composés avec soin, à offrir ou à s'offrir : fraîcheur, gourmandise et Provence réunis. Chaque panier peut être adapté à vos envies et à votre budget.</p>
     </div>
 
-    <div class="coffrets__grid">
-
-        <!-- Coffret Ibérique -->
-        <div class="coffret-card reveal">
-            <div class="coffret-card__img">
-                <img src="image/pack/coffret-cadeau-iberique.jpg" alt="Coffret cadeau Ibérique" loading="lazy" decoding="async">
-            </div>
-            <div class="coffret-card__body">
-                <h3 class="coffret-card__name">Coffret cadeau Ibérique</h3>
-                <ul class="coffret-card__list">
-                    <li>Petites Sardines à l'Huile d'Olive, El Tato</li>
-                    <li>Turrones, Coloma Garcia</li>
-                    <li>Petits gressins artisanaux, El Corte Inglés</li>
-                    <li>Chips goût jambon ibérique, Torres</li>
-                    <li>Huile d'olive vierge extra biologique, Alhema de Queiles</li>
-                </ul>
-                <div class="coffret-card__footer">
-                    <span class="coffret-card__price">55,00 €</span>
-                    <a href="contact.html" class="coffret-card__btn">Commander <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coffret Tout chocolat -->
-        <div class="coffret-card reveal">
-            <div class="coffret-card__img">
-                <img src="image/pack/coffret-cadeau-tout-chocolat.jpg" alt="Coffret cadeau Tout chocolat" loading="lazy" decoding="async">
-            </div>
-            <div class="coffret-card__body">
-                <h3 class="coffret-card__name">Coffret cadeau Tout chocolat</h3>
-                <ul class="coffret-card__list">
-                    <li>Amandes au chocolat, La Grande Épicerie de Paris</li>
-                    <li>Chocolat noir au praliné amandes, Bonnat</li>
-                    <li>Tablette blond Dulcey, Valrhona</li>
-                    <li>Tablette Lait 45% Praliné croustillant, Cluizel</li>
-                    <li>Chocolat chaud Angelina 25cl</li>
-                </ul>
-                <div class="coffret-card__footer">
-                    <span class="coffret-card__price">69,00 €</span>
-                    <a href="contact.html" class="coffret-card__btn">Commander <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coffret Jeune maman -->
-        <div class="coffret-card reveal">
-            <div class="coffret-card__img">
-                <img src="image/pack/coffret-cadeau-jeune-maman.jpg" alt="Coffret cadeau Jeune maman" loading="lazy" decoding="async">
-            </div>
-            <div class="coffret-card__body">
-                <h3 class="coffret-card__name">Coffret cadeau Jeune maman</h3>
-                <ul class="coffret-card__list">
-                    <li>Rooibos Vanille 20 sachets, Kusmi Tea</li>
-                    <li>Pâtes farfalle fantasia, Pastificio Artigiano</li>
-                    <li>Tablette chocolat noir, L'Éclair de Génie</li>
-                    <li>Confiture framboise cassis, La Cour d'Orgères</li>
-                    <li>Les sablés Bredele, La Grande Épicerie de Paris</li>
-                </ul>
-                <div class="coffret-card__footer">
-                    <span class="coffret-card__price">79,00 €</span>
-                    <a href="contact.html" class="coffret-card__btn">Commander <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coffret D'exception -->
-        <div class="coffret-card reveal">
-            <div class="coffret-card__img">
-                <img src="image/pack/coffret-cadeau-d-exception.jpg" alt="Coffret cadeau D'exception" loading="lazy" decoding="async">
-            </div>
-            <div class="coffret-card__body">
-                <h3 class="coffret-card__name">Coffret cadeau D'exception</h3>
-                <ul class="coffret-card__list">
-                    <li>Champagne Dom Pérignon Vintage 2015</li>
-                    <li>Foie gras d'oie 180g, Castaing</li>
-                    <li>Huile d'olive Vallée des Baux AOP, Château d'Estoublon</li>
-                    <li>Sel de Noirmoutier &amp; truffe du Périgord</li>
-                    <li>Marco Polo 100g, Mariage Frères</li>
-                </ul>
-                <div class="coffret-card__footer">
-                    <span class="coffret-card__price">499,00 €</span>
-                    <a href="contact.html" class="coffret-card__btn">Commander <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coffret Nature gourmande -->
-        <div class="coffret-card reveal">
-            <div class="coffret-card__img">
-                <img src="image/pack/coffret-cadeau-nature-gourmande.jpg" alt="Coffret cadeau Nature gourmande" loading="lazy" decoding="async">
-            </div>
-            <div class="coffret-card__body">
-                <h3 class="coffret-card__name">Coffret cadeau Nature gourmande</h3>
-                <ul class="coffret-card__list">
-                    <li>Concentré de gingembre bio yuzu &amp; thym, Gimber</li>
-                    <li>Mélange de fruits secs bio, Maison Naja</li>
-                    <li>Miel de fleurs sauvages 100% français</li>
-                    <li>Sablés citron-pavot, Maison Craquelin</li>
-                    <li>Tablette chocolat amande 46%, Genaveh</li>
-                </ul>
-                <div class="coffret-card__footer">
-                    <span class="coffret-card__price">99,00 €</span>
-                    <a href="contact.html" class="coffret-card__btn">Commander <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coffret duo vins -->
-        <div class="coffret-card reveal">
-            <div class="coffret-card__img">
-                <img src="image/pack/coffret-duo-vins-de-bordeaux.jpg" alt="Coffret duo vins de Bordeaux" loading="lazy" decoding="async">
-            </div>
-            <div class="coffret-card__body">
-                <h3 class="coffret-card__name">Coffret duo vins de Bordeaux</h3>
-                <ul class="coffret-card__list">
-                    <li>Château Chasse-Spleen, Héritage, AOC Haut-Médoc 2016</li>
-                    <li>Château Lalande, AOC Saint-Julien 2016</li>
-                </ul>
-                <div class="coffret-card__footer">
-                    <span class="coffret-card__price">68,00 €</span>
-                    <a href="contact.html" class="coffret-card__btn">Commander <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <div class="coffrets__grid" id="panierGrid"></div>
 </section>
+
+<!-- LIGHTBOX PANIER -->
+<div class="pmodal" id="pModal" role="dialog" aria-modal="true" aria-labelledby="pModalName">
+    <div class="pmodal__box">
+        <button class="pmodal__close" id="pModalClose" aria-label="Fermer">&times;</button>
+        <div class="pmodal__media" id="pModalMedia"></div>
+        <div class="pmodal__body">
+            <h2 class="pmodal__name" id="pModalName"></h2>
+            <p class="pmodal__desc" id="pModalDesc"></p>
+            <ul class="pmodal__list" id="pModalList"></ul>
+            <a href="contact.html" class="pmodal__btn">Commander ce panier <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+    </div>
+</div>
 
 
 <!-- FOOTER -->
@@ -517,6 +424,71 @@
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+
+    /* ============ PANIERS ============ */
+    const PANIERS = [
+        {
+            n: 'Corbeille de fruits frais',
+            tag: 'Fruits de saison',
+            img: 'image/pack/corbeille-de-fruits-frais.jpg',
+            d: "Une corbeille généreuse, composée le matin même avec les plus beaux fruits de l'étal : fruits exotiques, fruits de saison et raisins, présentés dans un panier en osier avec son ruban de raphia.",
+            items: ['Ananas et melon', 'Raisins blancs et noirs', 'Bananes, poires et pommes', 'Oranges et clémentines', 'Grenade et mangue', 'Composition variable selon les arrivages']
+        },
+        {
+            n: 'Panier Saveurs de Provence',
+            tag: 'Épicerie fine',
+            img: 'image/pack/panier-garni-le-fruitier.jpg',
+            d: "Le panier qui raconte la Provence : une sélection de nos producteurs et artisans partenaires, réunie dans un panier en osier habillé de tissu noir.",
+            items: ['Cookies de Provence, Maison Craquelin', 'Huile d’olive Grand Vallon, Moulin de Pélissanne', 'Farfalle curcuma & betterave, L’Antica Madia', 'Les Restanques de Lascours, vin blanc de la Famille Long', 'Miel de la Sainte-Baume, Mathieu Ghis', 'Vinaigre à la pulpe d’ail, Le Goût', 'Confiture de melon, Lou Cantoun', 'Sel de Camargue aux herbes de Provence', 'Bouillabaisse & crème de sardines, Les Belles de Marseille']
+        },
+        {
+            n: 'Panier Terroir & Méditerranée',
+            tag: 'Épicerie fine',
+            img: 'image/pack/panier-garni-epicerie-fine-provence.jpg',
+            d: "Notre grand panier gourmand : les incontournables du panier Saveurs de Provence, complétés d'une eau pétillante corse et d'une boîte de sel de Camargue. Idéal pour un cadeau d'entreprise ou une grande occasion.",
+            items: ['Cookies de Provence, Maison Craquelin', 'Huile d’olive Grand Vallon, Moulin de Pélissanne', 'Farfalle curcuma & betterave, L’Antica Madia', 'Les Restanques de Lascours, vin blanc de la Famille Long', 'Miel de la Sainte-Baume, Mathieu Ghis', 'Vinaigre à la pulpe d’ail, Le Goût', 'Confiture de melon, Lou Cantoun', 'Bouillabaisse & crème de sardines, Les Belles de Marseille', 'Eau minérale pétillante Orezza', 'Sel de Camargue aux herbes de Provence']
+        }
+    ];
+
+    const panierGrid = document.getElementById('panierGrid');
+    panierGrid.innerHTML = PANIERS.map((p, i) => `
+        <div class="coffret-card reveal" data-i="${i}" role="button" tabindex="0" aria-label="Voir ${p.n} en grand">
+            <div class="coffret-card__img"><img src="${p.img}" alt="${p.n}" loading="lazy" decoding="async"></div>
+            <div class="coffret-card__body">
+                <span class="coffret-card__tag">${p.tag}</span>
+                <h3 class="coffret-card__name">${p.n}</h3>
+                <p class="coffret-card__desc">${p.d}</p>
+                <span class="coffret-card__more">Voir en grand</span>
+            </div>
+        </div>`).join('');
+    panierGrid.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+
+    const pModal = document.getElementById('pModal');
+    let lastFocused = null;
+    function openPanier(i) {
+        const p = PANIERS[i];
+        if (!p) return;
+        document.getElementById('pModalMedia').innerHTML = `<img src="${p.img}" alt="${p.n}" decoding="async">`;
+        document.getElementById('pModalName').textContent = p.n;
+        document.getElementById('pModalDesc').textContent = p.d;
+        document.getElementById('pModalList').innerHTML = p.items.map(x => `<li>${x}</li>`).join('');
+        lastFocused = document.activeElement;
+        pModal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('pModalClose').focus();
+    }
+    function closePanier() {
+        pModal.classList.remove('is-open');
+        document.body.style.overflow = '';
+        if (lastFocused) lastFocused.focus();
+    }
+    panierGrid.querySelectorAll('.coffret-card').forEach(c => {
+        c.addEventListener('click', () => openPanier(+c.dataset.i));
+        c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPanier(+c.dataset.i); } });
+    });
+    document.getElementById('pModalClose').addEventListener('click', closePanier);
+    pModal.addEventListener('click', e => { if (e.target === pModal) closePanier(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && pModal.classList.contains('is-open')) closePanier(); });
 </script>
 </body>
 </html>
