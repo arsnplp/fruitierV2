@@ -449,6 +449,15 @@ const PRODUCERS = {
     'Maison Bourgeon': { loc:'Salon-de-Provence, Bouches-du-Rhône', d:'Mélanges originaux et parfumés de thés et d’infusions aux fruits, fleurs et épices.' },
     'Famille Long · La Restanque': { loc:'Roquevaire, Bouches-du-Rhône', d:'Issu du savoir-faire de la Famille Long, Les Restanques de Lascours est un vin blanc sec distingué par une médaille d’or et référencé au Guide Hachette.' },
     'Château Virant': { loc:'Lançon-de-Provence, Bouches-du-Rhône', d:'Vins réputés sous l’AOP Coteaux d’Aix-en-Provence, déclinés en rouges, rosés et blancs, issus d’un domaine emblématique.' },
+    'Vin de Provence': { loc:'Coteaux d’Aix-en-Provence, Bouches-du-Rhône', d:'Vins blancs de Provence sous l’AOP Coteaux d’Aix-en-Provence, sélectionnés pour leur fraîcheur et leur élégance.' },
+    'Château d’Astros': { loc:'Vidauban, Var', d:'Domaine provençal proposant la gamme Aventure en rouge, rosé et blanc : des vins frais et gourmands, à partager.' },
+    'Maison Ravoire': { loc:'Vallée du Rhône', d:'Maison familiale de la vallée du Rhône, avec deux grandes appellations rhodaniennes : Gigondas et Châteauneuf-du-Pape.' },
+    'Gabriel Meffre': { loc:'Gigondas, Vaucluse', d:'Maison de la vallée du Rhône proposant une sélection de crus : Cairanne « Saint-Jean », Vacqueyras « Saint-Barthélémy » et Crozes-Hermitage « Saint-Pierre ».' },
+    'Mommessin': { loc:'Beaujolais', d:'Grand vin du Beaujolais : le Saint-Amour « Grandes Mises », un cru souple et fruité issu du cépage gamay.' },
+    'Bouchard Aîné & Fils': { loc:'Beaune, Bourgogne', d:'Maison bourguignonne historique proposant un Saint-Véran, un Chardonnay et un Pinot Noir de Bourgogne.' },
+    'Maison Champy': { loc:'Beaune, Bourgogne', d:'La plus ancienne maison de Bourgogne, fondée en 1720. Le Pernand-Vergelesses blanc est un grand vin de Bourgogne tout en finesse.' },
+    'Domaine du Piton · J. Moreau & Fils': { loc:'Sancerre, Loire & Chablis, Bourgogne', d:'Deux grands blancs de caractère : le Sancerre « Le Piton » du Domaine du Piton et le Saint-Bris « L’Aubaine » de la maison J. Moreau & Fils, à Chablis.' },
+    'Dom Brial': { loc:'Baixas, Pyrénées-Orientales', d:'Muscat de Noël : un vin doux naturel du Roussillon, frais et aromatique, à déguster à l’apéritif ou avec les desserts des fêtes.' },
 
     'Moulin de Pélissanne · Le Grand Vallon': { loc:'Lascours, Bouches-du-Rhône', d:'Une huile d’olive artisanale d’exception, extraite à froid, offrant des arômes fruités et une belle opulence en bouche.' },
     'Moulin de Pélissanne': { loc:'Lascours, Bouches-du-Rhône', d:'Une huile d’olive artisanale d’exception, extraite à froid, offrant des arômes fruités et une belle opulence en bouche.' },
@@ -494,7 +503,7 @@ const PRODUCTS = [
     { n:'Épinard', c:'fruits', s:'Printemps', t:'Légume' },
     { n:'Fève', c:'fruits', s:'Printemps', t:'Légume' },
     { n:'Carotte', c:'fruits', s:'Printemps', t:'Légume' },
-    { n:'Salade', c:'fruits', s:'Printemps', t:'Légume' },
+    { n:'Salade', c:'fruits', s:'Printemps', t:'Légume', img:IMG('salades.jpg') },
     { n:'Persil', c:'fruits', s:'Printemps', t:'Légume' },
 
     // ---- FRUITS & LÉGUMES — Été ----
@@ -506,15 +515,15 @@ const PRODUCTS = [
     { n:'Abricot', c:'fruits', s:'Été', t:'Fruit' },
     { n:'Prune', c:'fruits', s:'Été', t:'Fruit' },
     { n:'Figue', c:'fruits', s:'Été', t:'Fruit' },
-    { n:'Pomme de terre', c:'fruits', s:'Été', t:'Fruit' },
+    { n:'Pomme de terre', c:'fruits', s:'Été', t:'Légume', img:IMG('pommes-de-terre.jpg') },
     { n:'Basilic', c:'fruits', s:'Été', t:'Légume' },
-    { n:'Tomate', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Tomate', c:'fruits', s:'Été', t:'Légume', img:IMG('tomates.jpg') },
     { n:'Courgette', c:'fruits', s:'Été', t:'Légume' },
     { n:'Aubergine', c:'fruits', s:'Été', t:'Légume' },
     { n:'Poivron', c:'fruits', s:'Été', t:'Légume' },
     { n:'Concombre', c:'fruits', s:'Été', t:'Légume' },
     { n:'Haricot vert', c:'fruits', s:'Été', t:'Légume' },
-    { n:'Salade', c:'fruits', s:'Été', t:'Légume' },
+    { n:'Salade', c:'fruits', s:'Été', t:'Légume', img:IMG('salades.jpg') },
     { n:'Persil', c:'fruits', s:'Été', t:'Légume' },
 
     // ---- FRUITS & LÉGUMES — Automne ----
@@ -523,8 +532,14 @@ const PRODUCTS = [
     { n:'Potimarron', c:'fruits', s:'Automne', t:'Légume' },
     { n:'Butternut', c:'fruits', s:'Automne', t:'Légume' },
     { n:'Poireau', c:'fruits', s:'Automne', t:'Légume' },
-    { n:'Salade', c:'fruits', s:'Automne', t:'Légume' },
+    { n:'Salade', c:'fruits', s:'Automne', t:'Légume', img:IMG('salade-frisee.jpg') },
     { n:'Persil', c:'fruits', s:'Automne', t:'Légume' },
+    { n:'Pomme de terre grenaille', c:'fruits', s:'Automne', t:'Légume', img:IMG('pommes-de-terre-grenaille.jpg') },
+    { n:'Patate douce', c:'fruits', s:'Automne', t:'Légume', img:IMG('patates-douces.jpg') },
+    { n:'Oignon', c:'fruits', s:'Automne', t:'Légume', img:IMG('oignons.jpg') },
+    { n:'Ail', c:'fruits', s:'Automne', t:'Légume', img:IMG('ail.jpg') },
+    { n:'Noix', c:'fruits', s:'Automne', t:'Fruit', img:IMG('noix.jpg') },
+    { n:'Amande', c:'fruits', s:'Automne', t:'Fruit', img:IMG('amandes.jpg') },
 
     // ---- FRUITS & LÉGUMES — Hiver ----
     { n:'Clémentine', c:'fruits', s:'Hiver', t:'Fruit' },
@@ -533,6 +548,8 @@ const PRODUCTS = [
     { n:'Mâche', c:'fruits', s:'Hiver', t:'Légume' },
     { n:'Navet', c:'fruits', s:'Hiver', t:'Légume' },
     { n:'Blette', c:'fruits', s:'Hiver', t:'Légume' },
+    { n:'Citron vert', c:'fruits', s:'Hiver', t:'Fruit', img:IMG('citrons-verts.jpg') },
+    { n:'Gingembre', c:'fruits', s:'Hiver', t:'Légume', img:IMG('gingembre.jpg') },
 
     // ---- ÉPICERIE FINE — Huiles, vinaigres & condiments ----
     { n:'Huile d’olive', b:'Moulin de Pélissanne · Le Grand Vallon', c:'epicerie', s:'Huiles, vinaigres & condiments', img:IMG('huile-olive.jpg') },
@@ -551,7 +568,7 @@ const PRODUCTS = [
     { n:'Soupe de poisson, croûtons et rouille', b:'Chez Fonfon', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('soupe-de-poissons.jpg') },
     { n:'Soupe de poisson de roche', b:'Chez Fonfon', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('soupe-poisson-de-roche.jpg') },
     { n:'Soupe au safran & bisque de homard', b:'Chez Fonfon', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('soupe-poisson-safran-bisque-homard.jpg') },
-    { n:'Tapas et conserves artisanales de la mer', b:'Pirate Cannerie', c:'epicerie', s:'Conserves & spécialités salées' },
+    { n:'Tapas et conserves artisanales de la mer', b:'Pirate Cannerie', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('pirate-cannerie-conserves-de-la-mer.jpg') },
     { n:'Filets d’anchois et conserves provençales', b:'Conserverie Provençale', c:'epicerie', s:'Conserves & spécialités salées' },
     { n:'Sardines camarguaise, au beurre, à la niçoise', b:'Ferrigno · Bonne Mer', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('sardines-camarguaise-beurre-nicoise.jpg') },
     { n:'Sardines aux saveurs, pastis, pesto, confit d’oignon, fenouil & anis', b:'Ferrigno · Bonne Mer', c:'epicerie', s:'Conserves & spécialités salées', img:IMG('sardines-saveurs.jpg') },
@@ -562,8 +579,8 @@ const PRODUCTS = [
     { n:'Foie gras, terrines & confits de canard', b:'Manoir d’Alexandre', c:'epicerie', s:'Conserves & spécialités salées' },
 
     // ---- ÉPICERIE FINE — Apéritif ----
-    { n:'Chips à la farine de pois chiches', b:'Chips de Panisse', c:'epicerie', s:'Apéritif' },
-    { n:'Chips artisanales', b:'Père Gourmand', c:'epicerie', s:'Apéritif' },
+    { n:'Chips à la farine de pois chiches', b:'Chips de Panisse', c:'epicerie', s:'Apéritif', img:IMG('chips-de-panisse.jpg') },
+    { n:'Chips artisanales', b:'Père Gourmand', c:'epicerie', s:'Apéritif', img:IMG('chips-artisanales-pere-gourmand.jpg') },
     { n:'Boîte apéros & tapas', c:'epicerie', s:'Apéritif', img:IMG('boite-aperos-tapas.jpg') },
     { n:'Olives et spécialités apéritives', b:'La Niçoise', c:'epicerie', s:'Apéritif' },
     { n:'Tartinables provençaux', b:'Les Délices de Margaux', c:'epicerie', s:'Apéritif' },
@@ -572,7 +589,7 @@ const PRODUCTS = [
     { n:'Pâtes fraîches, gnocchis et raviolis', b:'Castelli', c:'epicerie', s:'Produits frais & gastronomie' },
     { n:'Fromages de chèvre', b:'Karine Pédini', c:'epicerie', s:'Produits frais & gastronomie' },
     { n:'Saumon fumé et poutargue', b:'Le Fumeur de Provence', c:'epicerie', s:'Produits frais & gastronomie' },
-    { n:'Yaourts, fromages et lait', b:'GERENTES', c:'epicerie', s:'Produits frais & gastronomie' },
+    { n:'Yaourts, fromages et lait', b:'GERENTES', c:'epicerie', s:'Produits frais & gastronomie', img:IMG('lait-de-montagne-gerentes.jpg') },
     { n:'Jambon à l’os / ciboulette & herbes de Provence', b:'Jambon artisanal du Var', c:'epicerie', s:'Produits frais & gastronomie' },
     { n:'Œufs frais, pack de 6', b:'Ferme de Trets', c:'epicerie', s:'Produits frais & gastronomie', img:IMG('oeufs-frais-pack-6.jpg') },
     { n:'Œufs frais, pack de 12', b:'Ferme de Trets', c:'epicerie', s:'Produits frais & gastronomie', img:IMG('oeufs-frais-pack-12.jpg') },
@@ -584,28 +601,40 @@ const PRODUCTS = [
 
     // ---- BOISSONS & VINS — Café, thé & infusions ----
     { n:'Café italien / espresso', b:'Mokador', c:'boissons', s:'Café, thé & infusions' },
-    { n:'Thés et tisanes', b:'Maison Bourgeon', c:'boissons', s:'Café, thé & infusions' },
+    { n:'Thés et tisanes', b:'Maison Bourgeon', c:'boissons', s:'Café, thé & infusions', img:IMG('thes-infusions-maison-bourgeon.jpg') },
+    { n:'Coffret de thés de Noël', b:'Maison Bourgeon', c:'boissons', s:'Café, thé & infusions', img:IMG('coffret-thes-noel-maison-bourgeon.jpg') },
     { n:'Tisanes', b:'Le Roy René', c:'boissons', s:'Café, thé & infusions' },
 
     // ---- BOISSONS & VINS — Vins ----
-    { n:'Vin blanc sec', b:'Famille Long · La Restanque', c:'boissons', s:'Vins' },
-    { n:'Vins rouges, rosés et blancs AOP Coteaux d’Aix-en-Provence', b:'Château Virant', c:'boissons', s:'Vins' },
+    { n:'Les Restanques de Lascours, vin blanc sec', b:'Famille Long · La Restanque', c:'boissons', s:'Vins', img:IMG('vin-blanc-restanques-de-lascours.jpg') },
+    { n:'Adriju, blanc IGP Pays des Bouches-du-Rhône', b:'Famille Long · La Restanque', c:'boissons', s:'Vins', img:IMG('vin-blanc-adriju-famille-long.jpg') },
+    { n:'Vins rouges, rosés et blancs AOP Coteaux d’Aix-en-Provence', b:'Château Virant', c:'boissons', s:'Vins', img:IMG('vins-chateau-virant.jpg') },
+    { n:'Maritima, blanc AOP Coteaux d’Aix-en-Provence', b:'Vin de Provence', c:'boissons', s:'Vins', img:IMG('vin-blanc-maritima-coteaux-d-aix.jpg') },
+    { n:'John Angel, blanc AOP Coteaux d’Aix-en-Provence', b:'Vin de Provence', c:'boissons', s:'Vins', img:IMG('vin-blanc-john-angel-coteaux-d-aix.jpg') },
+    { n:'Aventure, rouge, rosé & blanc', b:'Château d’Astros', c:'boissons', s:'Vins', img:IMG('vins-aventure-chateau-d-astros.jpg') },
+    { n:'Gigondas & Châteauneuf-du-Pape', b:'Maison Ravoire', c:'boissons', s:'Vins', img:IMG('vins-gigondas-chateauneuf-maison-ravoire.jpg') },
+    { n:'Cairanne, Vacqueyras & Crozes-Hermitage', b:'Gabriel Meffre', c:'boissons', s:'Vins', img:IMG('vins-rhone-gabriel-meffre.jpg') },
+    { n:'Saint-Amour, Grandes Mises', b:'Mommessin', c:'boissons', s:'Vins', img:IMG('vin-saint-amour-mommessin.jpg') },
+    { n:'Saint-Véran, Chardonnay & Pinot Noir', b:'Bouchard Aîné & Fils', c:'boissons', s:'Vins', img:IMG('vins-bourgogne-bouchard-aine-fils.jpg') },
+    { n:'Pernand-Vergelesses', b:'Maison Champy', c:'boissons', s:'Vins', img:IMG('vin-pernand-vergelesses-maison-champy.jpg') },
+    { n:'Sancerre Le Piton & Saint-Bris L’Aubaine', b:'Domaine du Piton · J. Moreau & Fils', c:'boissons', s:'Vins', img:IMG('vins-sancerre-le-piton-saint-bris-moreau.jpg') },
+    { n:'Muscat de Noël', b:'Dom Brial', c:'boissons', s:'Vins', img:IMG('muscat-de-noel-dom-brial.jpg') },
 
     // ---- BOISSONS & VINS — Gamme corse ----
-    { n:'Boissons corses', c:'boissons', s:'Gamme corse' },
+    { n:'Boissons corses', c:'boissons', s:'Gamme corse', img:IMG('eau-orezza-corse.jpg') },
     { n:'Bières corses', c:'boissons', s:'Gamme corse' },
-    { n:'Vins corses', c:'boissons', s:'Gamme corse' },
+    { n:'Vins corses', c:'boissons', s:'Gamme corse', img:IMG('vins-corses-domaine-fiumicicoli.jpg') },
 
     // ---- CONFISERIE ----
     { n:'Chocolats, amandes et noisettes enrobées, pâtes de fruits', b:'François Doucet', c:'confiserie' },
     { n:'Calissons d’Aix, nougats blancs et noirs', b:'Le Roy René', c:'confiserie' },
-    { n:'Chocolats artisanaux Bean-to-Bar', b:'La Baleine à Cabosse', c:'confiserie' },
+    { n:'Chocolats artisanaux Bean-to-Bar', b:'La Baleine à Cabosse', c:'confiserie', img:IMG('chocolats-la-baleine-a-cabosse.jpg') },
     { n:'Tartes des Alpes : framboise, abricot, miel, noix, amandes', b:'Tarte Alpes', c:'confiserie' },
-    { n:'Biscuits artisanaux et sablés', b:'Maison Craquelin', c:'confiserie' },
-    { n:'Croquants provençaux aux amandes', b:'Chams Diffusion', c:'confiserie' },
-    { n:'Confitures artisanales', b:'Lou Cantoun', c:'confiserie' },
-    { n:'Miels de montagne et de lavande', b:'Patrick Jouglar', c:'confiserie' },
-    { n:'Miels de la Sainte-Baume : lavande, thym, toutes fleurs', b:'Mathieu Ghis', c:'confiserie' },
+    { n:'Biscuits artisanaux et sablés', b:'Maison Craquelin', c:'confiserie', img:IMG('biscuits-maison-craquelin.jpg') },
+    { n:'Croquants aux amandes et navettes provençales', b:'Chams Diffusion', c:'confiserie', img:IMG('navettes-croquants-provencaux.jpg') },
+    { n:'Confitures artisanales', b:'Lou Cantoun', c:'confiserie', img:IMG('confitures-lou-cantoun.jpg') },
+    { n:'Miels de montagne et de lavande', b:'Patrick Jouglar', c:'confiserie', img:IMG('miel-patrick-jouglar.jpg') },
+    { n:'Miels de la Sainte-Baume : lavande, thym, toutes fleurs', b:'Mathieu Ghis', c:'confiserie', img:IMG('miel-mathieu-ghis.jpg') },
     { n:'Glaces artisanales', b:'Ravi', c:'confiserie' },
 ];
 
