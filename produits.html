@@ -763,7 +763,8 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && pModal.cla
 
 
 function renderGrid() {
-    const filtered = PRODUCTS.filter(p => p.c === state.cat && (!state.sub || p.s === state.sub));
+    const filtered = PRODUCTS.filter(p => p.c === state.cat && (!state.sub || p.s === state.sub))
+        .sort((a, b) => (a.img ? 0 : 1) - (b.img ? 0 : 1)); // produits avec photo d'abord
     currentList = filtered;
     const grid = document.getElementById('productGrid');
     const empty = document.getElementById('resultsEmpty');
