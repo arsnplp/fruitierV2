@@ -102,6 +102,11 @@
         .split__img{display:flex;align-items:center;justify-content:center;padding:3rem 4rem 3rem 1.5rem;background:var(--cream);}
         .split__img img{width:100%;max-width:560px;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:var(--radius);box-shadow:0 18px 44px rgba(95,56,23,.16);transition:transform .8s var(--ease-out);}
         .split:hover .split__img img{transform:scale(1.02);}
+        /* Cadre fixe, photo décalée à l'intérieur pour amener le panier plus à droite */
+        .split__frame{display:block;width:100%;max-width:560px;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 44px rgba(95,56,23,.16);transition:transform .8s var(--ease-out);}
+        .split__frame img{max-width:none;height:100%;aspect-ratio:auto;border-radius:0;box-shadow:none;transform:translateX(4%) scale(1.1);}
+        .split:hover .split__frame img{transform:translateX(4%) scale(1.1);}
+        .split:hover .split__frame{transform:scale(1.02);}
         .split__text{display:flex;flex-direction:column;justify-content:center;padding:5rem 6rem;}
         .split__text--cream{background:var(--cream);}
         .split__text--white{background:var(--white);}
@@ -328,7 +333,7 @@
         </ul>
     </div>
     <div class="split__img">
-        <img src="image/pack/panier-garni-epicerie-fine-provence.jpg" alt="Paniers garnis et cadeaux gourmands" loading="lazy" decoding="async">
+        <span class="split__frame"><img src="image/pack/panier-garni-epicerie-fine-provence.jpg" alt="Paniers garnis et cadeaux gourmands" loading="lazy" decoding="async"></span>
     </div>
 </section>
 
