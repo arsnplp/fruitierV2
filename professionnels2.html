@@ -164,6 +164,13 @@
             .p2-nav-v2__place{display:none;}
             .p2-footer__inner{flex-direction:column;align-items:flex-start;}
         }
+        /* Bandeau final « Un partenaire local » : compact et centré sur téléphone */
+        @media(max-width:980px){
+            .p2-cta{padding-top:3rem;padding-bottom:3.5rem;}
+            .p2-cta__inner{gap:1.6rem;justify-items:center;text-align:center;}
+            .p2-cta__img{max-width:240px;margin:0 auto;}
+            .p2-cta h2{font-size:clamp(1.8rem,7.4vw,2.4rem);line-height:1.15;}
+        }
     </style>
     <style id="conformite">
         /* ===== Conformite : contrastes WCAG 2.1 AA + pied de page legal ===== */

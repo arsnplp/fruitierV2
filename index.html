@@ -1150,6 +1150,12 @@
         .p2-footer__legal a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
         :root{--text-muted:rgba(95,56,23,.8);}
     </style>
+    <style id="mobile-fix">
+        /* Menu mobile fermé : plus de panneau hors écran à droite (sur iPhone il faisait glisser toute la page latéralement) */
+        html,body{overflow-x:clip;}
+        .drawer{transform:none!important;clip-path:inset(0 0 0 100%);visibility:hidden;transition:clip-path .42s cubic-bezier(.16,1,.3,1),visibility 0s linear .42s!important;}
+        .drawer.is-open{clip-path:inset(0 0 0 0);visibility:visible;transition:clip-path .42s cubic-bezier(.16,1,.3,1),visibility 0s!important;}
+    </style>
 </head>
 <body>
 

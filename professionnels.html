@@ -208,6 +208,13 @@
         @media(max-width:400px){.p2-hero-v2{min-height:max(780px, calc(100svh - 69.78px));}}
         @media(max-width:374px){.p2-hero-v2{min-height:max(860px, calc(100svh - 69.78px));}}
         @media(max-width:359px){.p2-hero-v2{min-height:max(940px, calc(100svh - 69.78px));}}
+        /* Bandeau final « Un partenaire local » : compact et centré sur téléphone */
+        @media(max-width:980px){
+            .p2-cta{padding-top:3rem;padding-bottom:3.5rem;}
+            .p2-cta__inner{gap:1.6rem;justify-items:center;text-align:center;}
+            .p2-cta__img{max-width:240px;margin:0 auto;}
+            .p2-cta h2{font-size:clamp(1.8rem,7.4vw,2.4rem);line-height:1.15;}
+        }
     </style>
     <style id="conformite">
         /* ===== Conformite : contrastes WCAG 2.1 AA + pied de page legal ===== */
@@ -230,6 +237,12 @@
         .p2-footer__legal nav{display:flex;flex-wrap:wrap;gap:1.2rem;}
         .p2-footer__legal a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
         :root{--text-muted:rgba(28,43,26,.78);}
+    </style>
+    <style id="mobile-fix">
+        /* Menu mobile fermé : plus de panneau hors écran à droite (sur iPhone il faisait glisser toute la page latéralement) */
+        html,body{overflow-x:clip;}
+        .drawer{transform:none!important;clip-path:inset(0 0 0 100%);visibility:hidden;transition:clip-path .42s cubic-bezier(.16,1,.3,1),visibility 0s linear .42s!important;}
+        .drawer.is-open{clip-path:inset(0 0 0 0);visibility:visible;transition:clip-path .42s cubic-bezier(.16,1,.3,1),visibility 0s!important;}
     </style>
 </head>
 <body>
