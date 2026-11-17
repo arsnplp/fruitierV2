@@ -490,6 +490,8 @@
             margin-bottom: 3.5rem;
         }
         .blog-btns { display: flex; gap: 0.8rem; }
+        .blog-all { display:inline-flex; align-items:center; gap:.5rem; margin-right:.6rem; font-size:.72rem; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:#5f7f27; align-self:center; }
+        .blog-all:hover { text-decoration:underline; text-underline-offset:3px; }
         .blog-btn {
             width: 46px; height: 46px;
             background: #1C2B1A;
@@ -1194,6 +1196,7 @@
         <li><a href="offrir.html">Pour Offrir</a></li>
         <li><a href="professionnels.html">Professionnels</a></li>
         <li><a href="a-propos.html">À Propos</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contactez-nous</a></li>
     </ul>
 </div>
@@ -1318,6 +1321,7 @@
             <h2 class="display" style="color:#1C2B1A;">L'ACTUALITÉ CHEZ LE FRUITIER</h2>
         </div>
         <div class="blog-btns">
+            <a href="blog.html" class="blog-all">Tous les articles <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <button class="blog-btn" id="blogPrev" aria-label="Article précédent">
                 <svg class="arr" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             </button>
@@ -1336,7 +1340,7 @@
                     <p class="blog-card__tag">Événement · Mai 2025</p>
                     <h3 class="blog-card__title">ON FÊTE LES MÈRES CHEZ LE FRUITIER&nbsp;!</h3>
                     <p class="blog-card__excerpt">Samedi 23 mai nous recevions un bijoutier de la région qui crée des bijoux spéciaux pour la fête des mères…</p>
-                    <a href="#" class="blog-link">
+                    <a href="blog-fete-des-meres-le-fruitier.html" class="blog-link">
                         EN SAVOIR +
                         <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
@@ -1344,12 +1348,12 @@
             </article>
 
             <article class="blog-card">
-                <img src="image/legumes-de-saison-circuit-court.jpg" alt="Légumes d'été" class="blog-card__img" loading="lazy" decoding="async">
+                <img src="image/produit/web/tomates.jpg" alt="Tomates de saison" class="blog-card__img" loading="lazy" decoding="async">
                 <div class="blog-card__body">
                     <p class="blog-card__tag">Saison · Juin 2025</p>
                     <h3 class="blog-card__title">LES LÉGUMES D'ÉTÉ SONT ARRIVÉS</h3>
                     <p class="blog-card__excerpt">Tomates, courgettes, aubergines… La saison estivale bat son plein&nbsp;! Retrouvez le meilleur de nos maraîchers.</p>
-                    <a href="#" class="blog-link">
+                    <a href="blog-legumes-d-ete-sont-arrives.html" class="blog-link">
                         EN SAVOIR +
                         <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
@@ -1362,7 +1366,7 @@
                     <p class="blog-card__tag">Dégustation · Juillet 2025</p>
                     <h3 class="blog-card__title">NOUVEAUX MILLÉSIMES EN CAVE</h3>
                     <p class="blog-card__excerpt">Notre sélection de vins provençaux s'enrichit. Venez découvrir nos coups de cœur du moment en boutique.</p>
-                    <a href="#" class="blog-link">
+                    <a href="blog-nouveaux-millesimes-en-cave.html" class="blog-link">
                         EN SAVOIR +
                         <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
@@ -1370,12 +1374,12 @@
             </article>
 
             <article class="blog-card">
-                <img src="image/miel-artisanal-de-provence.jpg" alt="Miels artisanaux" class="blog-card__img" loading="lazy" decoding="async">
+                <img src="image/produit/web/miel-mathieu-ghis.jpg" alt="Miel de la Sainte-Baume de Mathieu Ghis" class="blog-card__img" loading="lazy" decoding="async">
                 <div class="blog-card__body">
                     <p class="blog-card__tag">Produits · Août 2025</p>
                     <h3 class="blog-card__title">NOS MIELS ARTISANAUX DE PROVENCE</h3>
                     <p class="blog-card__excerpt">Lavande, thym, garrigue… Des miels récoltés par nos apiculteurs partenaires. La Provence dans un pot.</p>
-                    <a href="#" class="blog-link">
+                    <a href="blog-miels-artisanaux-de-provence.html" class="blog-link">
                         EN SAVOIR +
                         <svg class="arr" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
@@ -1569,6 +1573,7 @@
                 <li><a href="offrir.html">Pour Offrir</a></li>
                 <li><a href="professionnels.html">Professionnels</a></li>
                 <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
 
