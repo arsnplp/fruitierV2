@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /professionnels2.html
 
-# Remplacer par l'URL réelle du site au lancement :
-# Sitemap: https://www.votre-domaine.fr/sitemap.xml
+Sitemap: https://fruitier13.fr/sitemap.xml
