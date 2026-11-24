@@ -50,13 +50,26 @@
         { "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Sunday", "opens": "07:30", "closes": "12:00" }
       ],
-      "priceRange": "€€"
+      "priceRange": "€€",
+      "sameAs": ["https://www.facebook.com/Le.FRUITIER.De.La.Destrousse/", "https://www.instagram.com/le.frutier.de.la.destrousse/"]
     }
     </script>
     <link rel="icon" type="image/png" href="image/logo-le-fruitier-la-destrousse.png">
     <link rel="stylesheet" href="css/fonts.css">
     <style>
         button{font-family:inherit;}
+        /* ─── INSTAGRAM ─── */
+        .insta{background:var(--cream,#F5F5EF);padding:6rem 7rem 5.5rem;}
+        .insta__head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+        .insta__head p{max-width:520px;margin-top:.8rem;font-size:.95rem;line-height:1.7;color:rgba(28,43,26,.72);}
+        .insta__btns{display:flex;gap:.7rem;flex-wrap:wrap;}
+        .insta__btns .btn svg.ico{width:17px;height:17px;transition:none;}
+        .insta__btns .btn:hover svg.ico{transform:none;}
+        .btn--outline{background:transparent;border:1.5px solid #1C2B1A;color:#1C2B1A;}
+        .btn--outline:hover{background:#1C2B1A;color:#fff;}
+        .insta__feed{min-height:200px;}
+        @media(max-width:1200px){.insta{padding:5rem 3rem 4.5rem;}}
+        @media(max-width:768px){.insta{padding:4rem 1.5rem;}.insta__btns .btn{flex:1 1 auto;justify-content:center;}}
         /* ─── VARIABLES ─────────────────────────────── */
         :root {
             --olive:      #8B8F47;
@@ -1540,6 +1553,30 @@
 
 
 <!-- ═══════════════════════════════════════════════
+     SECTION 6 – INSTAGRAM
+═══════════════════════════════════════════════ -->
+<section class="insta" id="instagram" aria-label="Le Fruitier sur Instagram">
+    <div class="insta__head">
+        <div>
+            <span class="label label--kiwi">@le.frutier.de.la.destrousse</span>
+            <h2 class="display" style="color:#1C2B1A;">SUIVEZ-NOUS SUR INSTAGRAM</h2>
+            <p>Arrivages du jour, nouveaux produits de nos producteurs et paniers garnis : suivez la vie de la boutique en photos.</p>
+        </div>
+        <div class="insta__btns">
+            <a href="https://www.instagram.com/le.frutier.de.la.destrousse/" class="btn btn--kiwi" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Nous suivre</a>
+            <a href="https://www.facebook.com/Le.FRUITIER.De.La.Destrousse/" class="btn btn--outline" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V13h2.8v8h3.3z"/></svg>Facebook</a>
+        </div>
+    </div>
+    <div class="insta__feed">
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed 4 -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-b27f5bae-4e12-41b0-a7c1-eb5c39b066c4" data-elfsight-app-lazy></div>
+    </div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════════
      FOOTER
 ═══════════════════════════════════════════════ -->
 <footer class="footer" id="contact">
@@ -1550,9 +1587,8 @@
             <span class="footer__brand-sub">Légumes · Fruits · Produits Régionaux</span>
             <p>Votre primeur de confiance à La Destrousse. Fraîcheur, terroir et gourmandise au cœur de la Provence.</p>
             <div class="footer__socials">
-                <a href="#" class="social" aria-label="Facebook">f</a>
-                <a href="#" class="social" aria-label="Instagram">ig</a>
-                <a href="#" class="social" aria-label="TikTok">tt</a>
+                <a href="https://www.facebook.com/Le.FRUITIER.De.La.Destrousse/" class="social" target="_blank" rel="noopener" aria-label="Facebook du Fruitier de La Destrousse"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V13h2.8v8h3.3z"/></svg></a>
+                <a href="https://www.instagram.com/le.frutier.de.la.destrousse/" class="social" target="_blank" rel="noopener" aria-label="Instagram du Fruitier de La Destrousse"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
             </div>
         </div>
 
